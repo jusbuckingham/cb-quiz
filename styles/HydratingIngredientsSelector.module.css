@@ -1,0 +1,107 @@
+/* HydratingIngredientsSelector.module.css */
+.container {
+    padding: 20px;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .backButton {
+    cursor: pointer;
+    /* Add styles for back button */
+  }
+  
+  .progress {
+    /* Add styles for progress indicator */
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #333; /* Darker boxes for options */
+    cursor: pointer;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Larger checkbox for mobile */
+    height: 24px;
+    margin-right: 10px;
+    border: 2px solid #fff; /* White border for checkbox */
+    box-sizing: border-box;
+  }
+  
+  .checkmark {
+    color: #fff;
+  }
+  
+  .optionSelected .checkbox {
+    background-color: #5BC0BE; /* Checked background */
+  }
+  
+  .info {
+    flex-grow: 1;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 0.8em;
+  }
+  
+  .continueButton {
+    /* Style your continue button here */
+  }
+  
+  .skipButton {
+    /* Style your skip button here */
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    /* Styles for desktop view */
+    .option {
+      padding: 10px;
+    }
+  
+    .label {
+      font-size: 1em;
+    }
+  
+    .description {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Styles for mobile view */
+    .option {
+      padding: 15px;
+    }
+  
+    .label {
+      font-size: 0.9em;
+    }
+  
+    .description {
+      font-size: 0.8em;
+    }
+  }
+  

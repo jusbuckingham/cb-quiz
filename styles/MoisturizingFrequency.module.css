@@ -1,0 +1,87 @@
+/* MoisturizingFrequency.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .backButton {
+    cursor: pointer;
+    /* Add styles for back button */
+  }
+  
+  .progress {
+    /* Add styles for progress indicator */
+  }
+  
+  .sliderContainer {
+    margin: 20px 0;
+  }
+  
+  .slider {
+    -webkit-appearance: none; /* Override default appearance */
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #333; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (cross-browser) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  .labels {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .centerLabel {
+    text-align: center;
+  }
+  
+  .description {
+    text-align: center;
+    font-style: italic;
+    margin: 10px 0;
+  }
+  
+  .continueButton, .skipButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Gold background for the buttons */
+    color: #000; /* Text color for the buttons */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .skipButton {
+    background-color: transparent;
+    color: #fff; /* Text color for the skip button */
+    border: 1px solid #fff; /* Border color for the skip button */
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    /* Styles for desktop view */
+    .container {
+      width: 50%; /* Or the width that matches your design */
+      margin: 0 auto; /* Center the container */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Styles for mobile view */
+    .container {
+      width: 100%; /* Full width on mobile */
+    }
+  }
+  

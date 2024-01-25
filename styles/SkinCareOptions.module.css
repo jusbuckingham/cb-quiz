@@ -1,0 +1,82 @@
+/* Base styles */
+:root {
+    --primary-color: #000000; /* Adjusted to match the screenshot background */
+    --text-color: #FFFFFF; /* White text */
+    --button-background: #5BC0BE; /* Teal button background */
+    --button-text-color: #0B132B; /* Dark blue button text */
+    --option-border-color: #FFFFFF; /* White border for options */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .leftPanel {
+    text-align: center;
+  }
+  
+  .rightPanel {
+    width: 100%; /* Full width on mobile */
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Options take full width on mobile */
+  }
+  
+  .option {
+    margin: 10px 0;
+    padding: 10px;
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--option-border-color);
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  h1, h2, p {
+    margin: 10px 0;
+  }
+  
+  h1 {
+    font-size: 1.5em; /* Slightly smaller font size for mobile */
+  }
+  
+  h2 {
+    font-size: 1.2em;
+  }
+  
+  p {
+    font-size: 0.9em;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .option {
+      /* Styles for buttons on mobile */
+    }
+  
+    /* Additional mobile specific styles */
+  }
+  
+  /* This media query is not in the screenshot but generally useful for responsiveness */
+  @media (min-width: 481px) {
+    .rightPanel {
+      /* Styles for wider screens */
+      max-width: 335px; /* Assuming 335px is the max width for the content */
+      margin: 0 auto; /* Centering the panel */
+    }
+  }
+  

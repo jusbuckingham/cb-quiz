@@ -1,0 +1,80 @@
+/* DailyBodyCareTime.module.css */
+.container {
+    padding: 20px;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .backButton {
+    cursor: pointer;
+    /* Add styles for back button */
+  }
+  
+  .progress {
+    /* Add styles for progress indicator */
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  .option {
+    background-color: #333; /* Grey background for options */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid transparent; /* Adjust border for selected option if needed */
+    cursor: pointer;
+  }
+  
+  .radio {
+    margin-right: 10px;
+    /* Hide the default radio button */
+    appearance: none;
+    background-color: #fff; /* White background for custom radio button */
+    /* Add more styles for custom radio button */
+  }
+  
+  .radio:checked {
+    background-color: #FFD700; /* Gold background for selected option */
+  }
+  
+  .continueButton, .skipButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Gold background for the buttons */
+    color: #000; /* Text color for the buttons */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .skipButton {
+    background-color: transparent;
+    color: #fff; /* Text color for the skip button */
+    border: 1px solid #fff; /* Border color for the skip button */
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    /* Styles for desktop view */
+    .container {
+      width: 50%; /* Or the width that matches your design */
+      margin: 0 auto; /* Center the container */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Styles for mobile view */
+    .container {
+      width: 100%; /* Full width on mobile */
+    }
+  }
+  
