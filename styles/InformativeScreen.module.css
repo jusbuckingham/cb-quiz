@@ -15,18 +15,11 @@
     max-width: 600px; /* Adjust as necessary for your layout */
   }
   
-  h2 {
-    color: #FFD700; /* Gold color for the 'Halfway there!' text */
-  }
+
   
-  h3 {
-    margin-top: 10px;
-  }
+
   
-  p {
-    margin-top: 10px;
-  }
-  
+
   .gotItButton, .skipButton {
     margin-top: 20px;
     padding: 10px 20px;

@@ -1,6 +1,6 @@
 // InformativeScreen.js
 import React from 'react';
-import styles from './InformativeScreen.module.css';
+import styles from '../styles/InformativeScreen.module.css';
 
 const InformativeScreen = ({ onGotIt, onSkip }) => {
   return (

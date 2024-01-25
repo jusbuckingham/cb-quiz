@@ -1,6 +1,6 @@
 // ProblemAreasSelector.js
 import React, { useState } from 'react';
-import styles from './ProblemAreasSelector.module.css';
+import styles from '../styles/ProblemAreasSelector.module.css';
 
 const problemAreas = [
   { id: 'thighsAndLegs', label: 'Loose skin on thighs and legs' },
