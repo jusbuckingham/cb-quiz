@@ -6,6 +6,11 @@
     --button-text-color: #0B132B; /* Dark blue button text */
     --option-border-color: #FFFFFF; /* White border for options */
   }
+
+  body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
   
   .container {
     display: flex;
