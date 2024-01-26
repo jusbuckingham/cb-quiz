@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import styles from '../styles/SkinCareOptions.module.css';
 
-const SkinCareOptions = () => {
+const SkinCareOptions = ({ onContinue }) => { // Pass the onContinue function as a prop
   const [selectedGoal, setSelectedGoal] = useState(null);
 
   const handleGoalSelection = (goal) => {
     setSelectedGoal(goal);
     // This function should navigate to the next question
-    // Implement your navigation logic here
+    // You can call the onContinue function to move to the next question
+    onContinue(); // Call the provided onContinue function
   };
 
   return (

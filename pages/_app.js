@@ -13,7 +13,7 @@ import '../styles/globals.css';
 
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 8; // Assuming there are 8 questions
+  const totalSlides = 9; // Assuming there are 8 questions
   const router = useRouter();
 
   const goToNextSlide = () => {
