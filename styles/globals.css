@@ -1,0 +1,8 @@
+/* styles/globals.css */
+
+/* Define custom properties (variables) here */
+:root {
+    --primary-color: #000000; /* Adjusted to match the screenshot background */
+    --text-color: #FFFFFF; /* White text */
+  }
+  

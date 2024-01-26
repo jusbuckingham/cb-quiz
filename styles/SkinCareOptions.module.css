@@ -1,20 +1,12 @@
 /* Base styles */
-:root {
-    --primary-color: #000000; /* Adjusted to match the screenshot background */
-    --text-color: #FFFFFF; /* White text */
-    --button-background: #5BC0BE; /* Teal button background */
-    --button-text-color: #0B132B; /* Dark blue button text */
-    --option-border-color: #FFFFFF; /* White border for options */
-  }
-  
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--primary-color);
-    color: var(--text-color);
     padding: 20px;
     font-family: 'Arial', sans-serif;
+    background-color: bg-primary-color;
+  color: text-text-color;
   }
   
   .leftPanel {
@@ -42,22 +34,6 @@
     transition: color 0.3s, background-color 0.3s;
   }
   
-  h1, h2, p {
-    margin: 10px 0;
-  }
-  
-  h1 {
-    font-size: 1.5em; /* Slightly smaller font size for mobile */
-  }
-  
-  h2 {
-    font-size: 1.2em;
-  }
-  
-  p {
-    font-size: 0.9em;
-  }
-  
   /* Mobile styles */
   @media (max-width: 480px) {
     .container {
@@ -80,3 +56,18 @@
     }
   }
   
+  /* Class-based selectors for h1, h2, and p */
+  .h1 {
+    font-size: 1.5em; /* Slightly smaller font size for mobile */
+    margin: 10px 0;
+  }
+
+  .h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  .p {
+    font-size: 0.9em;
+    margin: 10px 0;
+  }
