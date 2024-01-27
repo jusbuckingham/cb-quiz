@@ -1,6 +1,6 @@
 // SkincareExperienceQuestion.js
 import React, { useState } from 'react';
-import styles from '../styles/SkinDescriptionSlider.module.css';
+import styles from '../styles/globals.css';
 
 const SkincareExperienceQuestion = ({ onSubmit }) => {
   const [selectedOptions, setSelectedOptions] = useState({});

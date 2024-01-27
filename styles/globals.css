@@ -2,7 +2,108 @@
 
 /* Define custom properties (variables) here */
 :root {
-    --primary-color: #000000; /* Adjusted to match the screenshot background */
-    --text-color: #FFFFFF; /* White text */
+  --primary-color: #f3efef; /* Light background color for the right panel */
+  --text-color: #f2f2f2; /* Dark text color for better readability */
+  --background-color: #021e3e; /* Dark background color for the whole page */
+  --button-bg-color: #ffedd5; /* Light background color for buttons */
+  --button-bg-hover-color: #fed7aa; /* Light hover color for buttons */
+  --button-text-color: #1f2937; /* Dark text color for buttons */
+  --button-text-hover-color: #111827; /* Dark hover text color for buttons */
+  --font-family: 'Menlo', sans-serif; /* Font family with a fallback */
+}
+
+/* Global styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}
+
+/* Container and flexbox layout */
+.container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between left and right panels */
+  align-items: flex-start; /* Align panels to the start of the flex container */
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.leftPanel {
+  flex: 1; /* Takes up 1 fraction of the available space */
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+.rightPanel {
+  flex: 2; /* Takes up 2 fractions of the available space, making it larger than the left */
+  background-color: var(--primary-color);
+  padding: 2rem;
+  display: flex; /* Set up flex container for vertical alignment */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: flex-start; /* Align children to the start horizontally */
+  color: var(--text-color);
+}
+
+.heading, .title {
+  font-size: 2rem; /* Adjust font size as necessary */
+  font-weight: bold; /* Make the font bold */
+  margin-bottom: 1rem; /* Space after the heading */
+}
+
+.subheading {
+  font-size: 1rem; /* Adjust font size as necessary */
+  margin-bottom: 2rem; /* Space after the subheading */
+}
+
+/* Goal options container */
+.goalOptions {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button and options styles */
+.option {
+  display: flex; /* Align image and text side by side */
+  align-items: center; /* Align items vertically in the center */
+  width: 100%; /* Full width of the container */
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 1rem 2rem; /* Padding inside the buttons */
+  margin-bottom: 0.5rem; /* Margin between buttons */
+  border: none; /* No border */
+  border-radius: 0.5rem; /* Rounded corners */
+  font-weight: bold; /* Bold font for button text */
+  cursor: pointer; /* Cursor for clickable items */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+.option:hover {
+  background-color: var(--button-bg-hover-color);
+  color: var(--button-text-hover-color);
+}
+
+/* Image styles for options */
+.optionImage {
+  height: 4rem; /* Fixed height for images */
+  width: 6rem; /* Set a fixed width, adjust as needed */
+  margin-right: 1rem; /* Space between image and text */
+  background-color: #ccc; /* Placeholder color, replace with actual image */
+  /* Add 'background-image' with a URL for actual usage */
+}
+
+.optionText {
+  flex-grow: 1; /* Allows the text to fill the available space */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  
+
+  .leftPanel, .rightPanel {
+    width: 100%; /* Full width on small screens */
+  }
+}

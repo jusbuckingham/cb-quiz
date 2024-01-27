@@ -1,6 +1,6 @@
 // MoisturizingFrequency.js
 import React, { useState } from 'react';
-import styles from '../styles/MoisturizingFrequency.module.css';
+import styles from '../styles/globals.css';
 
 const MoisturizingFrequency = ({ onContinue, onSkip }) => {
   const [sliderValue, setSliderValue] = useState(5); // Default slider value

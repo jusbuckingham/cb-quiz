@@ -1,6 +1,6 @@
 // HydratingIngredientsSelector.js
 import React, { useState } from 'react';
-import styles from '../styles/HydratingIngredientsSelector.module.css';
+import styles from '../styles/globals.css';
 
 const ingredients = [
   { id: 'niacinamide', label: 'Niacinamide', description: 'This is a form of vitamin B that supports protein and collagen to promote optimal skin health' },

@@ -1,6 +1,6 @@
 // DailyBodyCareTime.js
 import React, { useState } from 'react';
-import styles from '../styles/DailyBodyCareTime.module.css';
+import styles from '../styles/globals.css';
 
 const options = [
   { id: '10min', label: '10 Minutes' },

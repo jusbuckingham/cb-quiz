@@ -1,6 +1,5 @@
-// ProblemAreasSelector.js
 import React, { useState } from 'react';
-import styles from '../styles/ProblemAreasSelector.module.css';
+import styles from '../styles/globals.css';
 
 const problemAreas = [
   { id: 'thighsAndLegs', label: 'Loose skin on thighs and legs' },
@@ -17,6 +16,20 @@ const ProblemAreasSelector = ({ onContinue, onSkip }) => {
       ...prevSelectedAreas,
       [area]: !prevSelectedAreas[area]
     }));
+  };
+
+  // Function to handle the skip action
+  const handleSkip = () => {
+    if (typeof onSkip === 'function') {
+      onSkip();
+    }
+  };
+
+  // Function to handle the continue action
+  const handleContinue = () => {
+    if (typeof onContinue === 'function') {
+      onContinue();
+    }
   };
 
   return (
@@ -40,8 +53,8 @@ const ProblemAreasSelector = ({ onContinue, onSkip }) => {
           </div>
         ))}
       </div>
-      <button className={styles.continueButton} onClick={onContinue}>Continue</button>
-      <button className={styles.skipButton} onClick={onSkip}>Skip</button>
+      <button className={styles.continueButton} onClick={handleContinue}>Continue</button>
+      <button className={styles.skipButton} onClick={handleSkip}>Skip</button>
     </div>
   );
 };

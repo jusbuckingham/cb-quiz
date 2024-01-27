@@ -1,6 +1,6 @@
 // SkinDescriptionSlider.js
 import React, { useState } from 'react';
-import styles from '../styles/SkinDescriptionSlider.module.css';
+import styles from '../styles/globals.css';
 
 const SkinDescriptionSlider = ({ onContinue, onSkip }) => {
   const [sliderValue, setSliderValue] = useState(50); // Initial slider value
