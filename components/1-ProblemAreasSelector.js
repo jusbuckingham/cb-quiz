@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../styles/globals.css';
+import styles from '../styles/1-ProblemAreasSelector.module.css';
 
 const problemAreas = [
   { id: 'thighsAndLegs', label: 'Loose skin on thighs and legs' },

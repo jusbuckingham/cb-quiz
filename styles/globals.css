@@ -21,89 +21,69 @@ body {
   padding: 0; /* Reset default padding */
 }
 
-/* Container and flexbox layout */
 .container {
   display: flex;
-  justify-content: space-between; /* Distribute space between left and right panels */
-  align-items: flex-start; /* Align panels to the start of the flex container */
-  min-height: 100vh; /* Full height of the viewport */
+  justify-content: center; /* Align the children (panels) in the center of the page horizontally */
+  align-items: flex-start; /* Align the children (panels) to the start of the flex container vertically */
+  min-height: 100vh;
+  padding: 4rem; /* Add padding around the container for some spacing */
+  background-color: var(--background-color); /* Dark background color */
 }
 
 .leftPanel {
-  flex: 1; /* Takes up 1 fraction of the available space */
+  flex-basis: 50%; /* Assign a base width to the left panel */
   color: var(--text-color);
-  padding: 2rem;
+  padding-right: 2rem; /* Add some right padding for spacing */
 }
 
 .rightPanel {
-  flex: 2; /* Takes up 2 fractions of the available space, making it larger than the left */
-  background-color: var(--primary-color);
+  flex-basis: 50%; /* Assign a base width to the right panel */
+  background-color: var(--primary-color); /* Light background color for the right panel */
   padding: 2rem;
-  display: flex; /* Set up flex container for vertical alignment */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center children vertically */
-  align-items: flex-start; /* Align children to the start horizontally */
-  color: var(--text-color);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2); /* Optional: add shadow to the left edge */
 }
 
 .heading, .title {
-  font-size: 2rem; /* Adjust font size as necessary */
-  font-weight: bold; /* Make the font bold */
-  margin-bottom: 1rem; /* Space after the heading */
+  font-size: 2.5rem; /* Slightly increase font size */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Ensure the text is white or a light color for contrast */
 }
 
 .subheading {
-  font-size: 1rem; /* Adjust font size as necessary */
-  margin-bottom: 2rem; /* Space after the subheading */
+  font-size: 1.25rem; /* Slightly increase font size */
+  margin-bottom: 2rem;
+  color: #ffffff;
 }
 
-/* Goal options container */
-.goalOptions {
-  display: flex;
-  flex-direction: column;
-}
+/* ... (other styles for options) ... */
 
-/* Button and options styles */
 .option {
-  display: flex; /* Align image and text side by side */
-  align-items: center; /* Align items vertically in the center */
-  width: 100%; /* Full width of the container */
+  display: flex;
+  align-items: center;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
-  padding: 1rem 2rem; /* Padding inside the buttons */
-  margin-bottom: 0.5rem; /* Margin between buttons */
-  border: none; /* No border */
-  border-radius: 0.5rem; /* Rounded corners */
-  font-weight: bold; /* Bold font for button text */
-  cursor: pointer; /* Cursor for clickable items */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+  padding: 1rem;
+  margin-bottom: 1rem; /* Add more margin for spacing between options */
+  border-radius: 0.5rem; /* Rounded corners for the buttons */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
 }
 
 .option:hover {
-  background-color: var(--button-bg-hover-color);
-  color: var(--button-text-hover-color);
+  transform: translateY(-2px); /* Optional: slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow on hover */
 }
 
-/* Image styles for options */
 .optionImage {
-  height: 4rem; /* Fixed height for images */
-  width: 6rem; /* Set a fixed width, adjust as needed */
-  margin-right: 1rem; /* Space between image and text */
-  background-color: #ccc; /* Placeholder color, replace with actual image */
-  /* Add 'background-image' with a URL for actual usage */
+  height: 6rem; /* Increase the size of the images */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 1rem;
+  background-color: #ccc; /* Placeholder, replace with actual images */
+  border-radius: 0.5rem; /* Optional: rounded corners for images */
 }
 
 .optionText {
-  flex-grow: 1; /* Allows the text to fill the available space */
-}
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .leftPanel, .rightPanel {
-    width: 100%; /* Full width on small screens */
-  }
+  flex-grow: 1;
+  font-size: 1.25rem; /* Increase font size for better readability */
 }

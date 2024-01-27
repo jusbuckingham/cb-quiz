@@ -11,6 +11,7 @@ import DailyBodyCareTime from '../components/6-DailyBodyCareTime';
 import SkincareExperienceQuestion from '../components/7-SkincareExperienceQuestion';
 import '../styles/globals.css';
 
+
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const totalSlides = 9; // Assuming there are 8 questions

@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-import styles from '../styles/globals.css';
+import styles from '../styles/0-SkinCareOptions.module.css'
 
 const SkinCareOptions = ({ onContinue }) => {
   const [selectedGoal, setSelectedGoal] = useState(null);
 
   const handleGoalSelection = (goal) => {
     setSelectedGoal(goal);
-    onContinue(goal); // Pass the selected goal to the onContinue function
+    onContinue(goal); // This will trigger the continuation process
   };
+
+  // Define your goals and corresponding images
+  const goals = [
+    { id: 'removeCrepeySkin', label: 'Remove Crepey Skin' , imageSrc: '/path-to-remove-crepey-skin-image.jpg' },
+    { id: 'relieveDrySkin', label: 'Relieve Dry, Flaky Skin', imageSrc: '/path-to-relieve-dry-skin-image.jpg' },
+    { id: 'getFirmerSkin', label: 'Get Firmer, Tighter, Younger Looking Skin', imageSrc: '/path-to-get-firmer-skin-image.jpg' },
+  ];
 
   return (
     <div className={styles.container}>
@@ -17,16 +24,14 @@ const SkinCareOptions = ({ onContinue }) => {
       </div>
       <div className={styles.rightPanel}>
         <h2 className={styles.title}>Choose Your Goal</h2>
-        <div className={styles.goalOptions}> {/* Adjusted the className here */}
-          {['Remove Crepey Skin', 'Relieve Dry, Flaky Skin', 'Get Firmer, Tighter, Younger Looking Skin'].map((goal) => (
+        <div className={styles.goalOptions}>
+          {goals.map((goal) => (
             <div 
-              key={goal}
-              className={`${styles.option} ${selectedGoal === goal ? styles.active : ''}`}
-              onClick={() => handleGoalSelection(goal)}
+              key={goal.id}
+              className={`${styles.option} ${selectedGoal === goal.id ? styles.active : ''}`}
+              onClick={() => handleGoalSelection(goal.id)}
             >
-              {/* Placeholder for image */}
-              <div className={styles.optionImage}></div> {/* Use a div for the image placeholder */}
-              <span className={styles.optionText}>{goal}</span> {/* Added className for text */}
+              <span className={styles.optionText}>{goal.label}</span>
             </div>
           ))}
         </div>
