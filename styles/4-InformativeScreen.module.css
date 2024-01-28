@@ -1,0 +1,60 @@
+/* styles/4-InformativeScreen.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #021e3e; /* Example dark background color */
+  }
+  
+  .content {
+    max-width: 600px; /* Maximum content width */
+    text-align: center;
+    color: #ffffff; /* Text color */
+    margin-bottom: 2rem; /* Space below the content before buttons */
+  }
+  
+  .gotItButton, .skipButton {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Make the text bold */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .gotItButton {
+    background-color: #4CAF50; /* Example continue button color */
+    color: white;
+  }
+  
+  .gotItButton:hover {
+    background-color: #367c39; /* Darken button on hover */
+  }
+  
+  .skipButton {
+    background-color: #f44336; /* Example skip button color */
+    color: white;
+  }
+  
+  .skipButton:hover {
+    background-color: #d32f2f; /* Darken button on hover */
+  }
+  
+  .imageContainer {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; /* Space below image */
+  }
+  
+  /* Add styles for responsive design if necessary */
+  @media (max-width: 768px) {
+    .content, .imageContainer {
+      padding: 0 20px; /* Padding on smaller screens */
+    }
+  }
+  

@@ -1,45 +1,51 @@
-// DailyBodyCareTime.js
-import React, { useState } from 'react';
-import styles from '../styles/globals.css';
-
-const options = [
-  { id: '10min', label: '10 Minutes' },
-  { id: '30min', label: '30 Minutes' },
-  { id: '1hour', label: '1 Hour' },
-  { id: '5min', label: '5 Minutes' }
-];
+import React, { useState, useMemo } from 'react';
+import styles from '../styles/6-DailyBodyCareTime.module.css';
 
 const DailyBodyCareTime = ({ onContinue, onSkip }) => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [sliderValue, setSliderValue] = useState(5);
 
-  const handleOptionChange = (optionId) => {
-    setSelectedOption(optionId);
+  const handleSliderChange = (event) => {
+    setSliderValue(event.target.value);
   };
+
+  const description = useMemo(() => {
+    const descriptions = {
+      1: "Newcomer: Whenever I touch my skin it feels flaky, but I leave it alone",
+      5: "Amateur: I try to apply lotion/cream, but still not regularly",
+      10: "Pro: I'm on fire. Deeply hydrating my skin every day is a must to stimulate collagen/elastin"
+    };
+    return descriptions[sliderValue] || "Select a value"; // Default message or handling for other values
+  }, [sliderValue]);
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.backButton}>&lt;</div>
+        <div className={styles.backButton} onClick={onSkip}>&lt; Back</div>
         <div className={styles.progress}>5/6</div>
       </div>
-      <h2>How much time do you spend on body care daily:</h2>
-      <form className={styles.options}>
-        {options.map((option) => (
-          <label key={option.id} className={styles.option}>
-            <input
-              type="radio"
-              name="bodyCareTime"
-              value={option.id}
-              checked={selectedOption === option.id}
-              onChange={() => handleOptionChange(option.id)}
-              className={styles.radio}
-            />
-            {option.label}
-          </label>
-        ))}
-      </form>
-      <button className={styles.continueButton} onClick={() => onContinue(selectedOption)}>Continue</button>
-      <button className={styles.skipButton} onClick={onSkip}>Skip</button>
+      <h2 className={styles.title}>How often do you moisturize your skin?</h2>
+      <div className={styles.descriptionBox}>
+        {description}
+      </div>
+      <div className={styles.sliderContainer}>
+        <input
+          type="range"
+          min="1"
+          max="10"
+          value={sliderValue}
+          onChange={handleSliderChange}
+          className={styles.slider}
+        />
+        <div className={styles.sliderTicks}>
+          <div className={styles.tick}>1</div>
+          <div className={styles.tick}>5</div>
+          <div className={styles.tick}>10</div>
+        </div>
+      </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.continueButton} onClick={() => onContinue(sliderValue)}>Continue</button>
+        <button className={styles.skipButton} onClick={onSkip}>Skip</button>
+      </div>
     </div>
   );
 };

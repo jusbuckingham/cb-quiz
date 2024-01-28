@@ -1,0 +1,122 @@
+/* styles/5-MoisturizingFrequency.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #021e3e; /* Assuming a dark background color */
+    color: white; /* Text color */
+    padding: 2rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 1rem 2rem;
+  }
+  
+  .backButton,
+  .progressIndicator {
+    cursor: pointer;
+    color: white;
+  }
+  
+  .mainContent {
+    text-align: center;
+    padding: 2rem;
+    width: 100%; /* You might want to set a max-width here */
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 15px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .sliderLabel {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .levelIndicator {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 1rem;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 2rem;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f0ad4e;
+    color: white;
+  }
+  
+  .button:hover {
+    background-color: darken(#f0ad4e, 10%);
+  }
+  
+  .skipButton {
+    background-color: #d9534f;
+  }
+  
+  .skipButton:hover {
+    background-color: darken(#d9534f, 10%);
+  }
+  
+  /* Add media queries for responsive adjustments */
+  @media (max-width: 768px) {
+    .slider,
+    .levelIndicator,
+    .buttonContainer {
+      width: 100%;
+    }
+  }
+  

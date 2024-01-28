@@ -1,0 +1,72 @@
+/* styles/7-SkincareExperienceQuestion.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #021e3e;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .option {
+    background-color: #97a0b2;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  .optionSelected {
+    background-color: #adb5bd;
+  }
+  
+  .checkbox {
+    margin-right: 1rem;
+  }
+  
+  .submissionMessage {
+    color: #adb5bd;
+    background-color: #333;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: none;
+  }
+  
+  .continueButton, .skipButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .continueButton:hover {
+    background-color: #367c39;
+  }
+  
+  .skipButton {
+    background-color: #f44336;
+  }
+  
+  .skipButton:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  }
+  

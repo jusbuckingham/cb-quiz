@@ -1,0 +1,144 @@
+/* styles/6-DailyBodyCareTime.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #021e3e; /* Dark background color */
+    color: white;
+    padding: 2rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 1rem 2rem;
+  }
+  
+  .backButton,
+  .progress {
+    cursor: pointer;
+    color: white;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sliderContainer {
+    width: 80%;
+    margin: 20px 0;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .sliderTicks {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  
+  .tick {
+    position: absolute;
+    text-align: center;
+  }
+  
+  .tick:first-child {
+    left: 0;
+  }
+  
+  .tick:nth-child(2) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tick:last-child {
+    right: 0;
+  }
+  
+  .descriptionBox {
+    background-color: #f8f9fa; /* Grayish background color */
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    color: #212529; /* Dark text color for contrast */
+    font-size: 0.9rem;
+    text-align: left;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 2rem;
+  }
+  
+  .continueButton,
+  .skipButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .continueButton {
+    background-color: #4CAF50; /* Continue button color */
+  }
+  
+  .continueButton:hover {
+    background-color: #367c39; /* Darken button on hover */
+  }
+  
+  .skipButton {
+    background-color: #f44336; /* Skip button color */
+  }
+  
+  .skipButton:hover {
+    background-color: #d32f2f; /* Darken button on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .sliderContainer,
+    .buttonContainer {
+      width: 100%;
+    }
+    
+    .backButton,
+    .progress {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+    
+    .title {
+      font-size: 1.5rem; /* Adjust title font size for smaller screens */
+    }
+    
+    .descriptionBox {
+      font-size: 0.9rem; /* Adjust description font size for smaller screens */
+    }
+  }
+  

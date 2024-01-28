@@ -1,6 +1,6 @@
 // SkincareExperienceQuestion.js
 import React, { useState } from 'react';
-import styles from '../styles/globals.css';
+import styles from '../styles/7-SkincareExperienceQuestion.module.css';
 
 const SkincareExperienceQuestion = ({ onSubmit }) => {
   const [selectedOptions, setSelectedOptions] = useState({});
@@ -16,18 +16,30 @@ const SkincareExperienceQuestion = ({ onSubmit }) => {
   ];
 
   const handleOptionChange = (option) => {
-    setSelectedOptions(prev => ({ ...prev, [option]: !prev[option] }));
-    
-    // Set the message if 'None of the Above' is selected
+    const newSelectedOptions = { ...selectedOptions, [option]: !selectedOptions[option] };
+
     if (option === 'None of the Above') {
-      setSubmissionMessage("Thanks for sharing! We've discovered that a lot of people have faced the same setbacks. City Beauty has a clear one-step treatment that is easy to follow with long-term results. In less than two minutes, you will feel better than ever.");
+      // If 'None of the Above' is selected, clear all other selections.
+      if (newSelectedOptions[option]) {
+        for (let key in newSelectedOptions) {
+          if (key !== 'None of the Above') {
+            newSelectedOptions[key] = false;
+          }
+        }
+        setSubmissionMessage("Thanks for sharing! We've discovered that a lot of people have faced the same setbacks. City Beauty has a clear one-step treatment that is easy to follow with long-term results. In less than two minutes, you will feel better than ever.");
+      } else {
+        setSubmissionMessage("");
+      }
     } else {
+      // If any other option is selected, 'None of the Above' should not be selected.
+      newSelectedOptions['None of the Above'] = false;
       setSubmissionMessage("");
     }
+
+    setSelectedOptions(newSelectedOptions);
   };
 
   const handleSubmit = () => {
-    // Submit the selected options and perform any further actions
     onSubmit(selectedOptions);
   };
 
@@ -35,7 +47,7 @@ const SkincareExperienceQuestion = ({ onSubmit }) => {
     <div className={styles.container}>
       <h2>Have you experienced any of these issues in your previous skincare attempts?</h2>
       {options.map((option, index) => (
-        <label key={index} className={styles.option}>
+        <label key={index} className={`${styles.option} ${selectedOptions[option] ? styles.optionSelected : ''}`}>
           <input
             type="checkbox"
             checked={!!selectedOptions[option]}
@@ -45,9 +57,11 @@ const SkincareExperienceQuestion = ({ onSubmit }) => {
           {option}
         </label>
       ))}
-      <div className={styles.submissionMessage}>{submissionMessage}</div>
+      <div className={styles.submissionMessage} style={{ display: submissionMessage ? 'block' : 'none' }}>
+        {submissionMessage}
+      </div>
       <button className={styles.continueButton} onClick={handleSubmit}>Continue</button>
-      <button className={styles.skipButton}>Skip</button>
+      <button className={styles.skipButton} onClick={onSubmit}>Skip</button>
     </div>
   );
 };

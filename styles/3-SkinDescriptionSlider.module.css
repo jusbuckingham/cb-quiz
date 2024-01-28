@@ -1,0 +1,104 @@
+/* styles/3-SkinDescriptionSlider.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--background-color); /* Make sure this variable is defined */
+  }
+  
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .backButton {
+    cursor: pointer;
+  }
+  
+  .progress {
+    /* Add specific styles for progress indicator */
+  }
+  
+  .heading, .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .subheading {
+    font-size: 1.25rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #97a0b2;
+    width: 80%;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .optionSelected {
+    background-color: #a2c2c2;
+  }
+  
+  .optionImage {
+    height: 80px;
+    width: 80px;
+    margin-right: 1rem;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  
+  .optionText {
+    flex-grow: 1;
+    font-size: 1.25rem;
+  }
+  
+  .checkbox {
+    /* Style your checkbox here */
+  }
+  
+  .checkmark {
+    /* Style your checkmark here */
+  }
+  
+  .continueButton, .skipButton {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .continueButton {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .skipButton {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .option {
+      width: 100%;
+    }
+  }
+  
