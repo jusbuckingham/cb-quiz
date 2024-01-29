@@ -22,8 +22,7 @@
 
 .rightPanel {
   padding-left: 2rem;
-  background-color: var(--primary-color); /* Lighter color as per style guide */
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--background-color); /* Defined in globals.css */
 }
 
 .heading {
@@ -58,6 +57,8 @@
   transition: background-color 0.3s, color 0.3s;
   border: 2px solid transparent; /* For hover and selected state */
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .option:hover {
@@ -72,8 +73,9 @@
 
 .optionImage {
   height: 4rem; /* Adjusted to fit the design guide */
-  width: 4rem; /* Maintain aspect ratio */
+  width: auto; /* Maintain aspect ratio */
   margin-right: 1rem;
+  margin-left: 1rem;
   background-color: #ccc; /* Placeholder color */
   border-radius: 50%; /* Circular images as per style guide */
 }
@@ -84,4 +86,22 @@
   flex-grow: 1;
 }
 
-/* Add any responsive designs or additional styles below */
+.goalOptions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  background-color: var(--background-color); /* Defined in globals.css */
+
+}
+
+/* Mobile Width */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    width: 335px;
+    margin: auto;
+  }
+}
