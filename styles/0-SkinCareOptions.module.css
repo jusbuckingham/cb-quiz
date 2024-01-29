@@ -1,65 +1,87 @@
+/* 0-SkinCareOptions.module.css */
 
-  
-  .container {
-    display: flex;
-    justify-content: center; /* Align the children (panels) in the center of the page horizontally */
-    align-items: flex-start; /* Align the children (panels) to the start of the flex container vertically */
-    min-height: 100vh;
-    padding: 4rem; /* Add padding around the container for some spacing */
-    background-color: var(--background-color); /* Dark background color */
-  }
-  
-  .leftPanel {
-    flex-basis: 50%; /* Assign a base width to the left panel */
-    color: var(--text-color);
-    padding-right: 2rem; /* Add some right padding for spacing */
-  }
-  
-  .rightPanel {
-    flex-basis: 50%; /* Assign a base width to the right panel */
-    padding: 2rem;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2); /* Optional: add shadow to the left edge */
-  }
-  
-  .heading, .title {
-    font-size: 2.5rem; /* Slightly increase font size */
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #ffffff; /* Ensure the text is white or a light color for contrast */
-  }
-  
-  .subheading {
-    font-size: 1.25rem; /* Slightly increase font size */
-    margin-bottom: 2rem;
-    color: #ffffff;
-  }
-  
-  
-  .option {
-    display: flex;
-    align-items: center;
-    background-color: #97a0b2;
-    padding: 1rem;
-    margin-bottom: 1rem; /* Add more margin for spacing between options */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for all properties */
-  }
-  
-  .option:hover {
-    transform: translateY(-2px); /* Optional: slight lift effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow on hover */
-  }
-  
-  .optionImage {
-    height: 6rem; /* Increase the size of the images */
-    width: auto; /* Maintain aspect ratio */
-    margin-right: 1rem;
-    background-color: #ccc; /* Placeholder, replace with actual images */
-    border-radius: 0.5rem; /* Optional: rounded corners for images */
-  }
-  
-  .optionText {
-    flex-grow: 1;
-    font-size: 1.25rem; /* Increase font size for better readability */
-  }
-  
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem;
+  background-color: var(--background-color); /* Defined in globals.css */
+}
+
+.leftPanel, .rightPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.leftPanel {
+  padding-right: 2rem;
+}
+
+.rightPanel {
+  padding-left: 2rem;
+  background-color: var(--primary-color); /* Lighter color as per style guide */
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+  font-size: var(--font-size-h1); /* 40px as per style guide */
+  line-height: var(--line-height-h1); /* 46px as per style guide */
+  font-weight: bold;
+  color: var(--text-color); /* White text as per style guide */
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: var(--font-size-h2); /* 25px as per style guide */
+  line-height: var(--line-height-h2); /* 29px as per style guide */
+  font-weight: 600; /* Semibold as per style guide */
+  color: var(--text-color);
+}
+
+.subheading {
+  font-size: var(--font-size-body); /* 16px as per style guide */
+  line-height: var(--line-height-body); /* 25px as per style guide */
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.option {
+  background-color: var(--primary-color); /* Default state color */
+  color: var(--text-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: 2px solid transparent; /* For hover and selected state */
+  display: flex;
+}
+
+.option:hover {
+  background-color: var(--secondary-color); /* Hover state color */
+  border-color: var(--accent-color); /* Stroke color for hover state */
+}
+
+.option.selected {
+  background-color: var(--accent-color); /* Selected state fill color */
+  border-color: var(--accent-color); /* Selected state stroke color */
+}
+
+.optionImage {
+  height: 4rem; /* Adjusted to fit the design guide */
+  width: 4rem; /* Maintain aspect ratio */
+  margin-right: 1rem;
+  background-color: #ccc; /* Placeholder color */
+  border-radius: 50%; /* Circular images as per style guide */
+}
+
+.optionText {
+  font-size: var(--font-size-h3); /* 20px as per style guide */
+  line-height: var(--line-height-h3); /* 24px as per style guide */
+  flex-grow: 1;
+}
+
+/* Add any responsive designs or additional styles below */

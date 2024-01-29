@@ -1,7 +1,5 @@
 /* styles/globals.css */
 
-/* ... (other global styles) ... */
-
 .container {
     display: flex;
     flex-direction: column; /* Stack children vertically */
@@ -93,13 +91,13 @@
   }
   
   .continueButton {
-    background-color: #4CAF50; /* Example continue button color */
+    background-color: #E2C47C; /* Example continue button color */
     color: white;
     /* Add any additional styles for the continue button */
   }
   
   .skipButton {
-    background-color: #f44336; /* Example skip button color */
+    background-color: var(--background-color); /* Example skip button color */
     color: white;
     /* Add any additional styles for the skip button */
   }
@@ -112,5 +110,4 @@
     }
   }
   
-  /* ... (any other styles you need) ... */
   

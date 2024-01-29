@@ -93,16 +93,17 @@
   }
   
   .continueButton {
-    background-color: #4CAF50; /* Example continue button color */
+    background-color: #E2C47C; /* Example continue button color */
     color: white;
     /* Add any additional styles for the continue button */
   }
   
   .skipButton {
-    background-color: #f44336; /* Example skip button color */
+    background-color: (--background-color); /* Example skip button color */
     color: white;
     /* Add any additional styles for the skip button */
   }
+  
   
   /* Add additional responsive design adjustments if needed */
   @media (max-width: 768px) {
