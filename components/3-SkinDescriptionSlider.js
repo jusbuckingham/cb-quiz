@@ -2,28 +2,25 @@
 import React, { useState } from 'react';
 import styles from '../styles/3-SkinDescriptionSlider.module.css';
 
+// Import your images
+import normalSkinImg from '../public/cb-quiz-frontend-imgs/3-normal-skin.png';
+import drySkinImg from '../public/cb-quiz-frontend-imgs/3-dry-skin.png';
+import microWrinklesImg from '../public/cb-quiz-frontend-imgs/3-microwrinkles.png';
+import crepeySkinImg from '../public/cb-quiz-frontend-imgs/3-crepey-skin.png';
+
 const SkinDescriptionSlider = ({ onContinue, onSkip }) => {
   const [sliderValue, setSliderValue] = useState(50); // Initial slider value
 
-  // Function to map the slider value to a description
-  const getSkinDescription = (value) => {
-    // Replace this with your actual logic to map the value to a skin description
-    if(value < 25) return 'Normal Skin';
-    if(value < 50) return 'Dry Skin';
-    if(value < 75) return 'Micro Wrinkles';
-    return 'Crepey Skin';
+  // Function to get the image based on the slider value
+  const getImageForSliderValue = (value) => {
+    if(value < 25) return normalSkinImg;
+    if(value < 50) return drySkinImg;
+    if(value < 75) return microWrinklesImg;
+    return crepeySkinImg;
   };
 
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value);
-    // Update the image based on slider value if necessary
-    // updateImage(getSkinDescription(event.target.value));
-  };
-
-  // Placeholder function - replace with your actual logic
-  const updateImage = (description) => {
-    console.log("Update image to show state:", description);
-    // Logic to change image based on description
   };
 
   return (
@@ -42,9 +39,13 @@ const SkinDescriptionSlider = ({ onContinue, onSkip }) => {
           className={styles.rangeSlider}
           onChange={handleSliderChange}
         />
-        <label className={styles.sliderLabel} style={{ left: `${sliderValue}%` }}>
-          {getSkinDescription(sliderValue)}
-        </label>
+      </div>
+      <div className={styles.imageContainer}>
+        <img 
+          src={getImageForSliderValue(sliderValue)} 
+          alt="Skin Condition" 
+          className={styles.skinImage}
+        />
       </div>
       <button className={styles.continueButton} onClick={() => onContinue(sliderValue)}>Continue</button>
       <button className={styles.skipButton} onClick={onSkip}>Skip</button>

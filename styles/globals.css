@@ -67,38 +67,6 @@ p {
 }
 
 
-/* Buttons */
-.button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.continueButton {
-  background-color: var(--accent-color);
-  color: white;
-  opacity: 0.6;
-}
-
-.continueButton.active {
-  opacity: 1;
-}
-
-.skipButton {
-  background-color: transparent;
-  color: var(--text-color);
-}
-
-/* Progress Bar */
-.progress-bar {
-  height: 20px;
-  background-color: var(--accent-color);
-  width: 25%;
-}
-
 /* Mobile Width */
 @media (max-width: 768px) {
   .container {

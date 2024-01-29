@@ -89,56 +89,42 @@
   }
   
   .buttonContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
+    display:grid;
+    justify-content: center;
+    gap: 10px;
     margin-top: 2rem;
   }
   
-  .continueButton,
-  .skipButton {
-    padding: 10px 20px;
+  .continueButton, .skipButton {
+    padding: 20px 150px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    color: white;
+    transition: background-color 0.3s ease;
   }
   
   .continueButton {
-    background-color: #4CAF50; /* Continue button color */
+    background-color: #E2C47C;
+    color: white;
   }
-  
-  .continueButton:hover {
-    background-color: #367c39; /* Darken button on hover */
-  }
-  
   .skipButton {
-    background-color: #f44336; /* Skip button color */
+    background-color: var(--button-bg-color);
+    border: var(--text-color);
+    border-style: ridge;
+    color: var(--text-color);
   }
   
   .skipButton:hover {
-    background-color: #d32f2f; /* Darken button on hover */
+    background-color: var(--button-bg-hover-color);
   }
   
   @media (max-width: 768px) {
-    .sliderContainer,
-    .buttonContainer {
-      width: 100%;
+    .option {
+      flex-direction: column;
+      align-items: flex-start;
     }
-    
-    .backButton,
-    .progress {
-      font-size: 1rem; /* Adjust font size for smaller screens */
-    }
-    
-    .title {
-      font-size: 1.5rem; /* Adjust title font size for smaller screens */
-    }
-    
-    .descriptionBox {
-      font-size: 0.9rem; /* Adjust description font size for smaller screens */
+  
+    .optionImage {
+      margin-bottom: 1rem;
     }
   }
   

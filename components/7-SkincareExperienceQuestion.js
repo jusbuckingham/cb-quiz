@@ -45,6 +45,7 @@ const SkincareExperienceQuestion = ({ onSubmit }) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.progress}>6/6</div>
       <h2>Have you experienced any of these issues in your previous skincare attempts?</h2>
       {options.map((option, index) => (
         <label key={index} className={`${styles.option} ${selectedOptions[option] ? styles.optionSelected : ''}`}>

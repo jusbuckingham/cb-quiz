@@ -70,35 +70,43 @@
     font-size: 1.25rem;
   }
   
-  .checkbox {
-    /* Style your checkbox here */
-  }
-  
-  .checkmark {
-    /* Style your checkmark here */
+  .buttonContainer {
+    display:grid;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
   }
   
   .continueButton, .skipButton {
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 20px 150px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
   .continueButton {
-    background-color: #4CAF50;
+    background-color: #E2C47C;
     color: white;
   }
-  
   .skipButton {
-    background-color: #f44336;
-    color: white;
+    background-color: var(--button-bg-color);
+    border: var(--text-color);
+    border-style: ridge;
+    color: var(--text-color);
+  }
+  
+  .skipButton:hover {
+    background-color: var(--button-bg-hover-color);
   }
   
   @media (max-width: 768px) {
     .option {
-      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .optionImage {
+      margin-bottom: 1rem;
     }
   }
   

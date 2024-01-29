@@ -17,15 +17,14 @@ const InformativeScreen = ({ onContinue, onSkip }) => {
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.backButton} onClick={handleSkipClick}>&lt; Back</div>
-        <div className={styles.progress}>3/6</div>
       </div>
       <div className={styles.imageContainer}>
         {/* Use the Next.js Image component for optimized image loading */}
         <Image
-          src="/path-to-your-image.jpg" // Update the path to your image
+          src="/cb-quiz-frontend-imgs/4-halfway-there.png" // Update the path to your image
           alt="Skin Illustration"
-          width={500} // Set the image width as required
-          height={300} // Set the image height as required
+          width={100} // Set the image width as required
+          height={100} // Set the image height as required
           layout="responsive" // Makes the image scale nicely to the parent element
         />
       </div>

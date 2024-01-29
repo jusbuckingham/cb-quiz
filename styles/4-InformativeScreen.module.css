@@ -1,60 +1,106 @@
-/* styles/4-InformativeScreen.module.css */
+/* 0-SkinCareOptions.module.css */
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #021e3e; /* Example dark background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem;
+  background-color: var(--background-color); /* Defined in globals.css */
+}
+
+.leftPanel, .rightPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.leftPanel {
+  padding-right: 2rem;
+}
+
+.rightPanel {
+  padding-left: 2rem;
+  background-color: var(--background-color); /* Defined in globals.css */
+}
+
+.heading {
+  font-size: var(--font-size-h1); /* 40px as per style guide */
+  line-height: var(--line-height-h1); /* 46px as per style guide */
+  font-weight: bold;
+  color: var(--text-color); /* White text as per style guide */
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: var(--font-size-h2); /* 25px as per style guide */
+  line-height: var(--line-height-h2); /* 29px as per style guide */
+  font-weight: 600; /* Semibold as per style guide */
+  color: var(--text-color);
+}
+
+.subheading {
+  font-size: var(--font-size-body); /* 16px as per style guide */
+  line-height: var(--line-height-body); /* 25px as per style guide */
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.option {
+  background-color: var(--primary-color); /* Default state color */
+  color: var(--text-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: 2px solid transparent; /* For hover and selected state */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option:hover {
+  background-color: var(--secondary-color); /* Hover state color */
+  border-color: var(--accent-color); /* Stroke color for hover state */
+}
+
+.option.selected {
+  background-color: var(--accent-color); /* Selected state fill color */
+  border-color: var(--accent-color); /* Selected state stroke color */
+}
+
+.optionImage {
+  height: 4rem; /* Adjusted to fit the design guide */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background-color: #ccc; /* Placeholder color */
+  border-radius: 50%; /* Circular images as per style guide */
+}
+
+.optionText {
+  font-size: var(--font-size-h3); /* 20px as per style guide */
+  line-height: var(--line-height-h3); /* 24px as per style guide */
+  flex-grow: 1;
+}
+
+.goalOptions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  background-color: var(--background-color); /* Defined in globals.css */
+
+}
+
+/* Mobile Width */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    width: 335px;
+    margin: auto;
   }
-  
-  .content {
-    max-width: 600px; /* Maximum content width */
-    text-align: center;
-    color: #ffffff; /* Text color */
-    margin-bottom: 2rem; /* Space below the content before buttons */
-  }
-  
-  .gotItButton, .skipButton {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold; /* Make the text bold */
-    transition: background-color 0.3s; /* Smooth background color transition */
-  }
-  
-  .gotItButton {
-    background-color: #4CAF50; /* Example continue button color */
-    color: white;
-  }
-  
-  .gotItButton:hover {
-    background-color: #367c39; /* Darken button on hover */
-  }
-  
-  .skipButton {
-    background-color: #f44336; /* Example skip button color */
-    color: white;
-  }
-  
-  .skipButton:hover {
-    background-color: #d32f2f; /* Darken button on hover */
-  }
-  
-  .imageContainer {
-    width: 100%; /* Full width */
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem; /* Space below image */
-  }
-  
-  /* Add styles for responsive design if necessary */
-  @media (max-width: 768px) {
-    .content, .imageContainer {
-      padding: 0 20px; /* Padding on smaller screens */
-    }
-  }
-  
+}

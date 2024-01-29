@@ -1,113 +1,166 @@
-/* styles/globals.css */
+/* 1-ProblemAreasSelector.module.css */
 
 .container {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    min-height: 100vh;
-    padding: 2rem;
-    background-color: var(--background-color); /* Dark background color */
-  }
-  
-  .header {
-    display: flex;
-    width: 100%; /* Full width to align back button and progress */
-    justify-content: space-between; /* Place back button and progress on opposite sides */
-    align-items: center;
-    margin-bottom: 2rem; /* Space below the header */
-  }
-  
-  .backButton {
-    /* Style for back button if it's not an actual <button> */
-    cursor: pointer;
-  }
-  
-  .progress {
-    /* Style for progress indicator */
-  }
-  
-  .heading, .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center; /* Center the titles */
-    margin: 1rem 0; /* Add top and bottom margin for spacing */
-  }
-  
-  .subheading {
-    font-size: 1.25rem;
-    color: #ffffff;
-    text-align: center; /* Center the subheadings */
-    margin-bottom: 3rem; /* Increase bottom margin for more space */
-  }
-  
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  cursor: pointer;
+}
+
+.progress {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.options {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  background-color: var(--primary-color); /* Default state color */
+  color: var(--text-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  border: 2px solid transparent; /* For hover and selected state */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optionSelected {
+  border-color: var(--accent-color); /* Border color for selected item */
+}
+
+.optionImage {
+  height: 80px;
+  width: 80px;
+  margin-right: 1rem;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.optionLabel {
+  flex-grow: 1;
+  font-size: 1.25rem;
+  /* Additional label styling */
+}
+
+.checkbox {
+  /* Hidden checkbox styling */
+  opacity: 0;
+  position: absolute;
+}
+
+.checkmark {
+  /* Custom checkmark styling */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Example pseudo-element for a custom checkmark symbol */
+.checkmark::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.buttonContainer {
+  display:grid;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.continueButton, .skipButton {
+  padding: 20px 150px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continueButton {
+  background-color: #E2C47C;
+  color: white;
+}
+.skipButton {
+  background-color: var(--button-bg-color);
+  border: var(--text-color);
+  border-style: ridge;
+  color: var(--text-color);
+}
+
+.skipButton:hover {
+  background-color: var(--button-bg-hover-color);
+}
+
+/* ... existing styles ... */
+
+.checkbox {
+  margin-right: 10px; /* Add space between checkbox and label */
+}
+
+.optionText {
+  flex-grow: 1; /* Ensure the label takes up the remaining space */
+}
+
+.optionImage {
+  width: 50px; /* Example width, adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 10px; /* Add space between label and image */
+}
+
+/* ... additional styles ... */
+
+
+@media (max-width: 768px) {
   .option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space out the checkbox and label */
-    background-color: #97a0b2; /* Adjust to your desired option color */
-    width: 80%; /* Adjust width as needed */
-    padding: 1rem 2rem; /* Padding inside the options */
-    margin-bottom: 1rem; /* Space between options */
-    cursor: pointer;
-    border-radius: 10px; /* Rounded corners for the options */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  /* Style for when an option is selected */
-  .optionSelected {
-    background-color: #a2c2c2; /* Change color to indicate selection */
-  }
-  
+
   .optionImage {
-    height: 80px; /* Fixed height for images */
-    width: 80px; /* Fixed width for images */
-    margin-right: 1rem;
-    background-size: cover; /* Ensure the image covers the area */
-    border-radius: 50%; /* Circular images */
+    margin-bottom: 1rem;
   }
-  
-  .optionText {
-    flex-grow: 1;
-    font-size: 1.25rem;
-  }
-  
-  /* Style for the checkbox or checkmark */
-  .checkbox {
-    /* Add styles for your checkbox appearance */
-  }
-  
-  .checkmark {
-    /* Add styles for your checkmark appearance, if it's a custom checkmark */
-  }
-  
-  /* Styles for continue and skip buttons */
-  .continueButton, .skipButton {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .continueButton {
-    background-color: #E2C47C; /* Example continue button color */
-    color: white;
-    /* Add any additional styles for the continue button */
-  }
-  
-  .skipButton {
-    background-color: var(--background-color); /* Example skip button color */
-    color: white;
-    /* Add any additional styles for the skip button */
-  }
-  
-  /* Add additional responsive design adjustments if needed */
-  @media (max-width: 768px) {
-    /* Adjust styles for mobile if necessary */
-    .option {
-      width: 100%; /* Full width on small screens */
-    }
-  }
-  
-  
+}
