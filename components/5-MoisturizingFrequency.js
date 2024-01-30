@@ -6,10 +6,12 @@ import styles from '../styles/5-MoisturizingFrequency.module.css';
 const DailyBodyCareTime = ({ onContinue, onSkip }) => {
   const [sliderValue, setSliderValue] = useState(5);
 
+  // Function to handle slider value change
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value);
   };
 
+  // Define descriptions based on slider values using useMemo
   const description = useMemo(() => {
     const descriptions = {
       1: 'Newcomer: Whenever I touch my skin it feels flaky, but I leave it alone',
@@ -29,14 +31,17 @@ const DailyBodyCareTime = ({ onContinue, onSkip }) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
+        {/* Back button */}
         <div className={styles.backButton} onClick={onSkip}>&lt; Back</div>
         <div className={styles.progress}>4/6</div>
       </div>
       <h2 className={styles.title}>How often do you moisturize your skin?</h2>
       <div className={styles.descriptionBox}>
+        {/* Display description based on slider value */}
         {description}
       </div>
       <div className={styles.sliderContainer}>
+        {/* Range slider */}
         <input
           type="range"
           min="1"
@@ -45,6 +50,7 @@ const DailyBodyCareTime = ({ onContinue, onSkip }) => {
           onChange={handleSliderChange}
           className={styles.slider}
         />
+        {/* Slider ticks */}
         <div className={styles.sliderTicks}>
           <div className={styles.tick}>1</div>
           <div className={styles.tick}>5</div>
@@ -52,6 +58,7 @@ const DailyBodyCareTime = ({ onContinue, onSkip }) => {
         </div>
       </div>
       <div className={styles.buttonContainer}>
+        {/* Continue and skip buttons */}
         <button className={styles.continueButton} onClick={() => onContinue(sliderValue)}>Continue</button>
         <button className={styles.skipButton} onClick={onSkip}>Skip</button>
       </div>
@@ -60,3 +67,4 @@ const DailyBodyCareTime = ({ onContinue, onSkip }) => {
 };
 
 export default DailyBodyCareTime;
+
