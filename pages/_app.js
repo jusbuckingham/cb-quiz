@@ -1,3 +1,5 @@
+// _app.js
+
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -11,24 +13,26 @@ import DailyBodyCareTime from '../components/6-DailyBodyCareTime';
 import SkincareExperienceQuestion from '../components/7-SkincareExperienceQuestion';
 import '../styles/globals.css';
 
-
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 9; // Assuming there are 8 questions
+  const totalSlides = 8; // Total number of slides
   const router = useRouter();
 
+  // Function to go to the next slide
   const goToNextSlide = () => {
     if (currentSlide < totalSlides) {
       setCurrentSlide(currentSlide + 1);
     }
   };
 
+  // Function to go to the previous slide (not currently used)
   const goToPreviousSlide = () => {
     if (currentSlide > 1) {
       setCurrentSlide(currentSlide - 1);
     }
   };
 
+  // Function to handle skipping to the next slide
   const handleSkip = () => {
     goToNextSlide();
   };
@@ -39,6 +43,7 @@ const App = () => {
         <title>City Beauty</title>
         {/* Add other metadata here */}
       </Head>
+      {/* Render the appropriate component based on the current slide */}
       {currentSlide === 1 && <SkinCareOptions onContinue={goToNextSlide} />}
       {currentSlide === 2 && <ProblemAreasSelector onContinue={goToNextSlide} onSkip={handleSkip} />}
       {currentSlide === 3 && <HydratingIngredientsSelector onContinue={goToNextSlide} onSkip={handleSkip} />}

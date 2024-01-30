@@ -1,4 +1,5 @@
 // pages/index.js
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import SkinCareOptions from '../components/0-SkinCareOptions';
@@ -13,8 +14,9 @@ import '../styles/globals.css';
 
 const IndexPage = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
-  const totalSlides = 8; // Assuming there are 8 questions
+  const totalSlides = 8; // Total number of slides
 
+  // Function to go to the next slide
   const goToNextSlide = () => {
     if (currentSlide < totalSlides) {
       setCurrentSlide(currentSlide + 1);
@@ -22,11 +24,12 @@ const IndexPage = () => {
     // Additional logic if needed when reaching the end of the slides
   };
 
+  // Function to handle skipping to the next slide
   const handleSkip = () => {
     goToNextSlide();
   };
 
-  // Render the current question component based on the currentSlide state
+  // Function to render the current question component based on the currentSlide state
   const renderQuestion = () => {
     switch (currentSlide) {
       case 1:
@@ -51,7 +54,6 @@ const IndexPage = () => {
           <div>
             <h1>Quiz Completed!</h1>
             <p>Thank you for taking the quiz.</p>
-            {/* More content or a summary of responses */}
           </div>
         );
     }
