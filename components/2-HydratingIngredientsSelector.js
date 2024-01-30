@@ -1,4 +1,5 @@
-// HydratingIngredientsSelector.js
+// 2-HydratingIngredientsSelector.js
+
 import React, { useState } from 'react';
 import styles from '../styles/2-HydratingIngredientsSelector.module.css';
 

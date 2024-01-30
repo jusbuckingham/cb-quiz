@@ -1,8 +1,9 @@
-// SkinDescriptionSlider.js
+// 3-SkinDescriptionSlider.js
+
 import React, { useState } from 'react';
 import styles from '../styles/3-SkinDescriptionSlider.module.css';
 
-// Import your images
+// Importing images
 import normalSkinImg from '../public/cb-quiz-frontend-imgs/3-normal-skin.png';
 import drySkinImg from '../public/cb-quiz-frontend-imgs/3-dry-skin.png';
 import microWrinklesImg from '../public/cb-quiz-frontend-imgs/3-microwrinkles.png';
