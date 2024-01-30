@@ -31,8 +31,8 @@ const InformativeScreen = ({ onContinue, onSkip }) => {
       <div className={styles.content}>
         <h2 className={styles.heading}>Halfway there!</h2>
         <h3 className={styles.subheading}>Why do people give up protecting and hydrating their skin?</h3>
-        <p>The No. 1 reason is using the wrong products that just aren't effective.</p>
-        <p>You'll achieve much more in just a few weeks of starting City Beauty's treatment.</p>
+        <p>The No. 1 reason is using the wrong products that just arent effective.</p>
+        <p>Youll achieve much more in just a few weeks of starting City Beautys treatment.</p>
         <p>Our primary goal is to deliver deep, long-lasting hydration that will prevent harsh aging and reduce the appearance of thinning, crepey skin. Visibly achieve healthy, supple skin with us.</p>
         <button className={styles.gotItButton} onClick={handleContinueClick}>Got it</button>
         <button className={styles.skipButton} onClick={handleSkipClick}>Skip</button>
