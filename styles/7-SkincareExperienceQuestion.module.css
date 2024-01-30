@@ -1,86 +1,104 @@
-/* 7-SkincareExperienceQuestion.module.css */
-
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #021e3e;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .option {
-    background-color: #97a0b2;
-    margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #021e3e; /* Dark blue background */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.progress {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.option {
+  background-color: #2C3E50; /* Darker shade for option background */
+  margin: 0.5rem 0;
+  padding: 1rem 2rem; /* Increased padding for better spacing */
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Adjust to position checkbox and label */
+  border: 1px solid transparent; /* For a clear border which can be colored on selection */
+}
+
+.optionSelected {
+  background-color: #34495E; /* Even darker shade for selected options */
+  border: 1px solid #F1C40F; /* Golden border for selected options */
+}
+
+.checkbox {
+  /* Visibility set to visible and custom styling for checkbox */
+  appearance: none;
+  margin-right: 1rem;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #F1C40F; /* Golden border for checkbox */
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: #F1C40F; /* Golden background for checked state */
+}
+
+.submissionMessage {
+  color: #adb5bd;
+  background-color: #333;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  /* Ensuring the message is displayed when needed */
+  display: block; /* Change to none to hide initially */
+}
+
+.buttonContainer {
+  display:grid;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.continueButton, .skipButton {
+  padding: 20px 150px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continueButton {
+  background-color: #E2C47C;
+  color: white;
+  border: none;
+}
+.skipButton {
+  background-color: var(--button-bg-color);
+  border: var(--text-color);
+  border-style: ridge;
+  color: var(--text-color);
+}
+
+.skipButton:hover {
+  background-color: var(--button-bg-hover-color);
+}
+
+@media (max-width: 768px) {
+  .container {
     padding: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-  }
-  
-  .optionSelected {
-    background-color: #adb5bd;
-  }
-  
-  .checkbox {
-    margin-right: 1rem;
-  }
-  
-  .submissionMessage {
-    color: #adb5bd;
-    background-color: #333;
-    padding: 1rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    display: none;
-  }
-  
-  .buttonContainer {
-    display:grid;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2rem;
-  }
-  
-  .continueButton, .skipButton {
-    padding: 20px 150px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .continueButton {
-    background-color: #E2C47C;
-    color: white;
-  }
-  .skipButton {
-    background-color: var(--button-bg-color);
-    border: var(--text-color);
-    border-style: ridge;
-    color: var(--text-color);
-  }
-  
-  .skipButton:hover {
-    background-color: var(--button-bg-hover-color);
   }
 
-  
-  
-  @media (max-width: 768px) {
-    .option {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .optionImage {
-      margin-bottom: 1rem;
-    }
+  .continueButton, .skipButton {
+    width: 100%; /* Full width buttons on mobile */
   }
-  
-  
+}

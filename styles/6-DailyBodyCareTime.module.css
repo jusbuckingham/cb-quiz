@@ -1,10 +1,11 @@
-/* BodyCareTime.module.css */
+/* 6-BodyCareTime.module.css */
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-color: #021E3E; /* Assuming color variable is set */
+  background-color: #021E3E; 
   color: white;
   padding: 2rem;
 }
@@ -28,18 +29,16 @@
 }
 
 .options {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
 }
 
 .option {
-  background-color: #30475E; /* Assuming color variable is set */
+  background-color: #30475E;
   padding: 1rem;
   margin-bottom: 1rem;
   border: none;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -47,7 +46,7 @@
 }
 
 .option.selected {
-  border: 2px solid #FFC107; /* Assuming color variable is set */
+  border: 2px solid #FFC107; 
 }
 
 .radioInput {
@@ -55,21 +54,32 @@
   cursor: pointer;
 }
 
-.continueButton,
-.skipButton {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 5px;
-  background-color: #FFC107; /* Assuming color variable is set */
-  color: #021E3E; /* Assuming color variable is set */
-  font-weight: bold;
+.buttonContainer {
+  display:grid;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.continueButton:hover,
+.continueButton, .skipButton {
+  padding: 20px 150px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continueButton {
+  background-color: #E2C47C;
+  color: white;
+  border: none;
+}
+.skipButton {
+  background-color: var(--button-bg-color);
+  border: var(--text-color);
+  border-style: ridge;
+  color: var(--text-color);
+}
+
 .skipButton:hover {
-  background-color: #FFB300; /* Lighter shade for hover effect */
+  background-color: var(--button-bg-hover-color);
 }
 
 @media (max-width: 768px) {
