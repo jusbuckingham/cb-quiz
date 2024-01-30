@@ -1,3 +1,5 @@
+// 6-DailyBodyCareTime.js
+
 import React, { useState, useMemo } from 'react';
 import styles from '../styles/6-DailyBodyCareTime.module.css';
 

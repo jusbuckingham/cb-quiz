@@ -1,3 +1,5 @@
+// 5-MoisturizingFrequency.js
+
 import React, { useState } from 'react';
 import styles from '../styles/5-MoisturizingFrequency.module.css';
 

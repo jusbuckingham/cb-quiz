@@ -1,4 +1,5 @@
-// SkincareExperienceQuestion.js
+// 7-SkincareExperienceQuestion.js
+
 import React, { useState } from 'react';
 import styles from '../styles/7-SkincareExperienceQuestion.module.css';
 
