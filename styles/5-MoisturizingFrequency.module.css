@@ -6,8 +6,8 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #021e3e; /* Assuming a dark background color */
-    color: white; /* Text color */
+    background-color: #021e3e; 
+    color: white; 
     padding: 2rem;
   }
   
@@ -29,7 +29,7 @@
   .mainContent {
     text-align: center;
     padding: 2rem;
-    width: 100%; /* You might want to set a max-width here */
+    width: 100%; 
   }
   
   .title {

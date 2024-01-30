@@ -2,105 +2,68 @@
 
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   padding: 4rem;
-  background-color: var(--background-color); /* Defined in globals.css */
+  background-color: var(--background-color); /* Make sure this is defined in globals.css */
+  text-align: center; /* Center text for all child elements */
 }
 
-.leftPanel, .rightPanel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.leftPanel {
-  padding-right: 2rem;
-}
-
-.rightPanel {
-  padding-left: 2rem;
-  background-color: var(--background-color); /* Defined in globals.css */
-}
-
-.heading {
-  font-size: var(--font-size-h1); /* 40px as per style guide */
-  line-height: var(--line-height-h1); /* 46px as per style guide */
-  font-weight: bold;
-  color: var(--text-color); /* White text as per style guide */
-  margin-bottom: 1rem;
-}
-
-.title {
-  font-size: var(--font-size-h2); /* 25px as per style guide */
-  line-height: var(--line-height-h2); /* 29px as per style guide */
-  font-weight: 600; /* Semibold as per style guide */
-  color: var(--text-color);
-}
-
-.subheading {
-  font-size: var(--font-size-body); /* 16px as per style guide */
-  line-height: var(--line-height-body); /* 25px as per style guide */
-  color: var(--text-color);
-  margin-bottom: 2rem;
-}
-
-.option {
-  background-color: var(--primary-color); /* Default state color */
-  color: var(--text-color);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  border: 2px solid transparent; /* For hover and selected state */
+.header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
-.option:hover {
-  background-color: var(--secondary-color); /* Hover state color */
-  border-color: var(--accent-color); /* Stroke color for hover state */
+.backButton {
+  cursor: pointer;
+  font-size: 1.5rem; /* Adjust size as needed */
 }
 
-.option.selected {
-  background-color: var(--accent-color); /* Selected state fill color */
-  border-color: var(--accent-color); /* Selected state stroke color */
+.imageContainer {
+  /* Adjust as needed to display the image */
 }
 
-.optionImage {
-  height: 4rem; /* Adjusted to fit the design guide */
-  width: auto; /* Maintain aspect ratio */
+.content {
+  max-width: 600px; /* Adjust width as needed for your design */
+}
+
+
+.gotItButton, .skipButton {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: var(--border-radius-button); /* Define this in globals.css */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gotItButton {
+  background-color: var(--button-bg-color); /* Define this in globals.css */
+  color: white;
+  font-size: var(--font-size-body);
   margin-right: 1rem;
-  margin-left: 1rem;
-  background-color: #ccc; /* Placeholder color */
-  border-radius: 50%; /* Circular images as per style guide */
 }
 
-.optionText {
-  font-size: var(--font-size-h3); /* 20px as per style guide */
-  line-height: var(--line-height-h3); /* 24px as per style guide */
-  flex-grow: 1;
+.skipButton {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color); /* Adds a border to the skip button */
 }
 
-.goalOptions {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.title {
-  background-color: var(--background-color); /* Defined in globals.css */
-
-}
-
-/* Mobile Width */
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
-    width: 335px;
-    margin: auto;
+    padding: 2rem;
+    width: auto;
+  }
+
+
+  .gotItButton, .skipButton {
+    padding: 0.5rem 1rem; /* Smaller padding on smaller screens */
+    font-size: smaller; /* Smaller font size on smaller screens */
   }
 }
