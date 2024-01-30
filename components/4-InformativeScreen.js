@@ -1,3 +1,5 @@
+// 4-InformativeScreen.js
+
 import React from 'react';
 import Image from 'next/image'; 
 import styles from '../styles/4-InformativeScreen.module.css'; 
