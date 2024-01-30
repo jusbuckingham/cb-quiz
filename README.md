@@ -1,6 +1,6 @@
 # CB Skincare Quiz
 
-This project is a skincare quiz application designed for City Beauty. It guides users through a series of questions about their skin care routine and preferences to provide personalized skincare advice.
+This project is a skincare quiz application. It guides users through a series of questions about their skin care routine and preferences to provide personalized skincare advice.
 
 ## Features
 
