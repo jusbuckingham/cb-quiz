@@ -1,4 +1,4 @@
-/* 1-ProblemAreasSelector.module.css */
+/* 2-HydratingIngredientsSelector.module.css */
 
 .container {
   display: flex;
@@ -135,8 +135,6 @@
   background-color: var(--button-bg-hover-color);
 }
 
-/* ... existing styles ... */
-
 .checkbox {
   margin-right: 10px; /* Add space between checkbox and label */
 }
@@ -150,9 +148,6 @@
   height: auto; /* Maintain aspect ratio */
   margin-left: 10px; /* Add space between label and image */
 }
-
-/* ... additional styles ... */
-
 
 @media (max-width: 768px) {
   .option {
