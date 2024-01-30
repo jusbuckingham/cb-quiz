@@ -1,4 +1,4 @@
-/* 5-MoisturizingFrequency.module.css */
+/*  */
 
 .container {
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #021e3e;
+  background-color: #021e3e; /* Dark background color */
   color: white;
   padding: 2rem;
 }
@@ -21,15 +21,9 @@
 }
 
 .backButton,
-.progressIndicator {
+.progress {
   cursor: pointer;
   color: white;
-}
-
-.mainContent {
-  text-align: center;
-  padding: 2rem;
-  width: 100%;
 }
 
 .title {
@@ -38,17 +32,13 @@
 }
 
 .sliderContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 2rem 0;
+  width: 80%;
+  margin: 20px 0;
 }
 
 .slider {
   -webkit-appearance: none;
-  width: 80%;
+  width: 100%;
   height: 15px;
   border-radius: 5px;
   background: #ddd;
@@ -61,34 +51,45 @@
   opacity: 1;
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
-  cursor: pointer;
-}
-
-.sliderLabel {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  margin: 10px 0;
-}
-
-.levelIndicator {
+.sliderTicks {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.tick {
+  position: absolute;
+  text-align: center;
+}
+
+.tick:first-child {
+  left: 0;
+}
+
+.tick:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tick:last-child {
+  right: 0;
+}
+
+.descriptionBox {
+  background-color: #f8f9fa; /* Grayish background color */
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: #212529; /* Dark text color for contrast */
+  font-size: 0.9rem;
+  text-align: left;
   width: 80%;
-  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .buttonContainer {
-  display: grid;
+  display:grid;
   justify-content: center;
   gap: 10px;
   margin-top: 2rem;
@@ -105,32 +106,24 @@
   background-color: #E2C47C;
   color: white;
 }
-
 .skipButton {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
+  background-color: var(--button-bg-color);
+  border: var(--text-color);
+  border-style: ridge;
+  color: var(--text-color);
 }
 
 .skipButton:hover {
-  background-color: #333; /* Darker background on hover */
+  background-color: var(--button-bg-hover-color);
 }
 
 @media (max-width: 768px) {
-  .sliderContainer {
-    width: 90%;
+  .option {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .continueButton, .skipButton {
-    padding: 15px 100px; /* Adjust padding for smaller screens */
-  }
-
-  .header {
-    padding: 1rem; /* Adjust padding for smaller screens */
-  }
-
-  .levelIndicator,
-  .sliderLabel {
-    width: 90%; /* Adjust width for smaller screens */
+  .optionImage {
+    margin-bottom: 1rem;
   }
 }

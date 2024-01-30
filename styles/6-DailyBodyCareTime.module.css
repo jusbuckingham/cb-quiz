@@ -1,130 +1,79 @@
-/* 6-DailyBodyCareTime.module.css */
-
+/* BodyCareTime.module.css */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #021e3e; /* Dark background color */
-    color: white;
-    padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #021E3E; /* Assuming color variable is set */
+  color: white;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.backButton,
+.progress {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.option {
+  background-color: #30475E; /* Assuming color variable is set */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option.selected {
+  border: 2px solid #FFC107; /* Assuming color variable is set */
+}
+
+.radioInput {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.continueButton,
+.skipButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  background-color: #FFC107; /* Assuming color variable is set */
+  color: #021E3E; /* Assuming color variable is set */
+  font-weight: bold;
+}
+
+.continueButton:hover,
+.skipButton:hover {
+  background-color: #FFB300; /* Lighter shade for hover effect */
+}
+
+@media (max-width: 768px) {
+  .options {
+    width: 90%;
   }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    padding: 1rem 2rem;
-  }
-  
-  .backButton,
-  .progress {
-    cursor: pointer;
-    color: white;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .sliderContainer {
-    width: 80%;
-    margin: 20px 0;
-  }
-  
-  .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 15px;
-    border-radius: 5px;
-    background: #ddd;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity .2s;
-  }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .sliderTicks {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    width: 100%;
-  }
-  
-  .tick {
-    position: absolute;
-    text-align: center;
-  }
-  
-  .tick:first-child {
-    left: 0;
-  }
-  
-  .tick:nth-child(2) {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .tick:last-child {
-    right: 0;
-  }
-  
-  .descriptionBox {
-    background-color: #f8f9fa; /* Grayish background color */
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    color: #212529; /* Dark text color for contrast */
-    font-size: 0.9rem;
-    text-align: left;
-    width: 80%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .buttonContainer {
-    display:grid;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2rem;
-  }
-  
-  .continueButton, .skipButton {
-    padding: 20px 150px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .continueButton {
-    background-color: #E2C47C;
-    color: white;
-  }
-  .skipButton {
-    background-color: var(--button-bg-color);
-    border: var(--text-color);
-    border-style: ridge;
-    color: var(--text-color);
-  }
-  
-  .skipButton:hover {
-    background-color: var(--button-bg-hover-color);
-  }
-  
-  @media (max-width: 768px) {
-    .option {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .optionImage {
-      margin-bottom: 1rem;
-    }
-  }
-  
+}
