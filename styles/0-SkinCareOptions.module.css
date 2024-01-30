@@ -1,106 +1,120 @@
 /* 0-SkinCareOptions.module.css */
 
+/* The main container for the skincare options, which centers content and takes up full viewport height */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem;
-  background-color: var(--background-color); /* Defined in globals.css */
+  min-height: 100vh; /* Full screen height */
+  padding: 4rem; /* Padding around the content */
+  background-color: var(--background-color); /* Uses the background color defined in globals.css */
 }
 
+/* Styling for both left and right panels within the container */
 .leftPanel, .rightPanel {
-  flex: 1;
+  flex: 1; /* Each panel takes equal width */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Vertically center content within each panel */
 }
 
+/* Additional padding for the left panel to separate it from the right panel */
 .leftPanel {
   padding-right: 2rem;
 }
 
+/* Additional padding for the right panel and a background color from variables */
 .rightPanel {
   padding-left: 2rem;
-  background-color: var(--background-color); /* Defined in globals.css */
+  background-color: var(--background-color);
 }
 
+/* Heading styles using variables for font sizing and line height */
 .heading {
-  font-size: var(--font-size-h1); /* 40px as per style guide */
-  line-height: var(--line-height-h1); /* 46px as per style guide */
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
   font-weight: bold;
-  color: var(--text-color); /* White text as per style guide */
-  margin-bottom: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem; /* Space below the heading */
 }
 
+/* Title styles for a smaller heading using variables */
 .title {
-  font-size: var(--font-size-h2); /* 25px as per style guide */
-  line-height: var(--line-height-h2); /* 29px as per style guide */
-  font-weight: 600; /* Semibold as per style guide */
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  font-weight: 600; /* Semibold */
   color: var(--text-color);
 }
 
+/* Subheading styles with a smaller font size and more margin below */
 .subheading {
-  font-size: var(--font-size-body); /* 16px as per style guide */
-  line-height: var(--line-height-body); /* 25px as per style guide */
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   color: var(--text-color);
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* More space below subheadings */
 }
 
+/* Option button styles */
 .option {
-  background-color: var(--primary-color); /* Default state color */
+  background-color: var(--primary-color); /* Default button color */
   color: var(--text-color);
   padding: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  border: 2px solid transparent; /* For hover and selected state */
+  margin-bottom: 1rem; /* Space between buttons */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+  border: 2px solid transparent; /* Transparent border by default, visible on hover */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space out elements inside */
   align-items: center;
 }
 
+/* Hover state styles for option buttons */
 .option:hover {
-  background-color: var(--secondary-color); /* Hover state color */
-  border-color: var(--accent-color); /* Stroke color for hover state */
+  background-color: var(--secondary-color); /* Color change on hover */
+  border-color: var(--accent-color); /* Border color change on hover */
 }
 
+/* Styles for selected option buttons */
 .option.selected {
-  background-color: var(--accent-color); /* Selected state fill color */
-  border-color: var(--accent-color); /* Selected state stroke color */
+  background-color: var(--accent-color); /* Fill color for selected state */
+  border-color: var(--accent-color); /* Stroke color for selected state */
 }
 
+/* Styles for images within options, ensuring circular shape and consistent sizing */
 .optionImage {
-  height: 4rem; /* Adjusted to fit the design guide */
+  height: 4rem;
   width: auto; /* Maintain aspect ratio */
-  margin-right: 1rem;
-  margin-left: 1rem;
-  background-color: #ccc; /* Placeholder color */
-  border-radius: 50%; /* Circular images as per style guide */
+  margin-right: 1rem; /* Space to the right */
+  margin-left: 1rem; /* Space to the left */
+  background-color: #ccc; /* Placeholder background color */
+  border-radius: 50%; /* Circular shape */
 }
 
+/* Text within an option button */
 .optionText {
-  font-size: var(--font-size-h3); /* 20px as per style guide */
-  line-height: var(--line-height-h3); /* 24px as per style guide */
-  flex-grow: 1;
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  flex-grow: 1; /* Allows text to grow and fill available space */
 }
 
+/* Styling for a group of goal options, if needed */
 .goalOptions {
-  width: 100%;
+  width: 100%; /* Full width of the container */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack children vertically */
 }
 
+/* Overrides the title background color to be transparent */
 .title {
-  background-color: var(--background-color); /* Defined in globals.css */
-
+  background-color: var(--background-color);
 }
 
-/* Mobile Width */
+/* Media query for mobile-specific styles */
 @media (max-width: 768px) {
+  /* Adjusts the main container for mobile by reducing padding and setting a specific width */
   .container {
-    padding: 20px;
-    width: 335px;
-    margin: auto;
+    padding: 20px; /* Reduced padding on smaller screens */
+    width: 335px; /* Fixed width on smaller screens */
+    margin: auto; /* Center the container */
   }
 }

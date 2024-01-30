@@ -1,32 +1,37 @@
+/* 7-SkincareExperienceQuestion.module.css */
+
+/* === Container Styles === */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  min-height: 100vh; /* Minimum full viewport height */
   background-color: #021e3e; /* Dark blue background */
-  color: white;
-  padding: 2rem;
-  text-align: center;
+  color: white; /* White text color */
+  padding: 2rem; /* Add padding around content */
+  text-align: center; /* Center text for all child elements */
 }
 
+/* === Header Styles === */
 .header {
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem 0; /* Add padding to header */
 }
 
 .progress {
   font-size: 1rem;
-  color: white;
-  margin-bottom: 2rem;
+  color: white; /* White text color */
+  margin-bottom: 2rem; /* Add space at the bottom */
 }
 
+/* === Option Styles === */
 .option {
   background-color: #2C3E50; /* Darker shade for option background */
-  margin: 0.5rem 0;
+  margin: 0.5rem 0; /* Add margin top and bottom for spacing */
   padding: 1rem 2rem; /* Increased padding for better spacing */
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for options */
+  cursor: pointer; /* Show pointer cursor on hover */
   display: flex;
   align-items: center;
   justify-content: space-between; /* Adjust to position checkbox and label */
@@ -39,63 +44,66 @@
 }
 
 .checkbox {
-  /* Visibility set to visible and custom styling for checkbox */
-  appearance: none;
-  margin-right: 1rem;
+  /* Custom checkbox styling */
+  appearance: none; /* Hide default checkbox appearance */
+  margin-right: 1rem; /* Add space on the right of the checkbox */
   height: 20px;
   width: 20px;
-  border-radius: 50%;
+  border-radius: 50%; /* Rounded checkbox */
   border: 2px solid #F1C40F; /* Golden border for checkbox */
-  background-color: transparent;
-  cursor: pointer;
+  background-color: transparent; /* Transparent background */
+  cursor: pointer; /* Show pointer cursor on hover */
 }
 
 .checkbox:checked {
   background-color: #F1C40F; /* Golden background for checked state */
 }
 
+/* === Submission Message Styles === */
 .submissionMessage {
   color: #adb5bd;
-  background-color: #333;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  /* Ensuring the message is displayed when needed */
+  background-color: #333; /* Dark background for the message */
+  padding: 1rem; /* Add padding inside the message */
+  margin-top: 1rem; /* Add space at the top */
+  border-radius: 5px; /* Rounded corners for the message */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow for elevation */
   display: block; /* Change to none to hide initially */
 }
 
+/* === Button Container Styles === */
 .buttonContainer {
-  display:grid;
-  justify-content: center;
-  margin-top: 2rem;
+  display: grid; /* Use CSS Grid for layout */
+  justify-content: center; /* Center the buttons horizontally */
+  margin-top: 2rem; /* Add space at the top */
 }
 
 .continueButton, .skipButton {
-  padding: 20px 150px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 20px 150px; /* Button padding */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 .continueButton {
-  background-color: #E2C47C;
-  color: white;
-  border: none;
+  background-color: #E2C47C; /* Custom button background color */
+  color: white; /* White text color */
+  border: none; /* Remove button border */
 }
+
 .skipButton {
-  background-color: var(--button-bg-color);
-  border: var(--text-color);
-  border-style: ridge;
-  color: var(--text-color);
+  background-color: var(--button-bg-color); /* Button background color from CSS variables */
+  border: var(--text-color); /* Button border color from CSS variables */
+  border-style: ridge; /* Add ridge border style */
+  color: var(--text-color); /* Text color from CSS variables */
 }
 
 .skipButton:hover {
-  background-color: var(--button-bg-hover-color);
+  background-color: var(--button-bg-hover-color); /* Button background hover color from CSS variables */
 }
 
+/* === Responsive Styles (Max-width: 768px) === */
 @media (max-width: 768px) {
   .container {
-    padding: 1rem;
+    padding: 1rem; /* Reduce padding on smaller screens */
   }
 
   .continueButton, .skipButton {

@@ -1,62 +1,65 @@
 /* 2-HydratingIngredientsSelector.module.css */
 
+/* === Container Styles === */
 .container {
   display: flex;
-  flex-direction:column;
-  align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
-  background-color: var(--background-color);
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh; /* Minimum full viewport height */
+  padding: 2rem; /* Add padding around content */
+  background-color: var(--background-color); /* Background color from CSS variables */
 }
 
+/* === Header Styles === */
 .header {
   display: flex;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  justify-content: space-between; /* Space between header items */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 2rem; /* Add space at the bottom */
 }
 
 .backButton {
-  cursor: pointer;
+  cursor: pointer; /* Show pointer cursor on hover */
 }
 
 .progress {
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--text-color); /* Text color from CSS variables */
 }
 
 .heading {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ffffff;
-  text-align: center;
-  margin: 1rem 0;
+  color: #ffffff; /* White text color */
+  text-align: center; /* Center-align text */
+  margin: 1rem 0; /* Add space above and below */
 }
 
 .subheading {
   font-size: 1.25rem;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 3rem;
+  color: #ffffff; /* White text color */
+  text-align: center; /* Center-align text */
+  margin-bottom: 3rem; /* Add space at the bottom */
 }
 
+/* === Options Styles === */
 .options {
   width: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack options vertically */
 }
 
 .option {
-  background-color: var(--primary-color); /* Default state color */
-  color: var(--text-color);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: background-color 0.3s, color 0.3s;
-  border: 2px solid transparent; /* For hover and selected state */
+  background-color: var(--primary-color); /* Default state background color */
+  color: var(--text-color); /* Text color from CSS variables */
+  padding: 1rem; /* Add padding inside each option */
+  margin-bottom: 1rem; /* Add space between options */
+  transition: background-color 0.3s, color 0.3s; /* Smooth color transitions */
+  border: 2px solid transparent; /* Transparent border */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Space between option elements */
+  align-items: center; /* Center option elements vertically */
 }
 
 .optionSelected {
@@ -67,72 +70,72 @@
   height: 80px;
   width: 80px;
   margin-right: 1rem;
-  background-size: cover;
-  border-radius: 50%;
+  background-size: cover; /* Cover the container with the image */
+  border-radius: 50%; /* Round image corners */
 }
 
 .optionLabel {
-  flex-grow: 1;
+  flex-grow: 1; /* Expand label to take remaining space */
   font-size: 1.25rem;
-  /* Additional label styling */
+  /* Additional label styling can be added here */
 }
 
 .checkbox {
-  /* Hidden checkbox styling */
-  opacity: 0;
-  position: absolute;
+  opacity: 0; /* Hide the checkbox */
+  position: absolute; /* Remove from the document flow */
 }
 
 .checkmark {
-  /* Custom checkmark styling */
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: var(--accent-color);
-  border-radius: 50%;
-  position: relative;
+  background: var(--accent-color); /* Custom checkmark color */
+  border-radius: 50%; /* Round checkmark */
+  position: relative; /* Establish positioning context for pseudo-element */
 }
 
 /* Example pseudo-element for a custom checkmark symbol */
 .checkmark::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%; /* Vertically center the pseudo-element */
+  left: 50%; /* Horizontally center the pseudo-element */
+  transform: translate(-50%, -50%); /* Center the pseudo-element perfectly */
   width: 12px;
   height: 12px;
-  background-color: white;
-  border-radius: 50%;
+  background-color: white; /* Checkmark symbol color */
+  border-radius: 50%; /* Round checkmark symbol */
 }
 
+/* === Button Container Styles === */
 .buttonContainer {
-  display:grid;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 2rem;
+  display: grid; /* Use CSS Grid for layout */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+  margin-top: 2rem; /* Add space at the top */
 }
 
 .continueButton, .skipButton {
-  padding: 20px 150px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 20px 150px; /* Button padding */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 .continueButton {
-  background-color: #E2C47C;
-  color: white;
+  background-color: #E2C47C; /* Custom button background color */
+  color: white; /* White text color */
 }
+
 .skipButton {
-  background-color: var(--button-bg-color);
-  border: var(--text-color);
-  border-style: ridge;
-  color: var(--text-color);
+  background-color: var(--button-bg-color); /* Button background color from CSS variables */
+  border: var(--text-color); /* Button border color from CSS variables */
+  border-style: ridge; /* Add ridge border style */
+  color: var(--text-color); /* Text color from CSS variables */
 }
 
 .skipButton:hover {
-  background-color: var(--button-bg-hover-color);
+  background-color: var(--button-bg-hover-color); /* Button background hover color from CSS variables */
 }
 
 .checkbox {
@@ -149,13 +152,14 @@
   margin-left: 10px; /* Add space between label and image */
 }
 
+/* === Responsive Styles (Max-width: 768px) === */
 @media (max-width: 768px) {
   .option {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Stack option elements vertically */
+    align-items: flex-start; /* Align option elements to the left */
   }
 
   .optionImage {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Add space at the bottom of images */
   }
 }

@@ -11,3 +11,12 @@ This project is a skincare quiz application. It guides users through a series of
 ## Technology stack
 - React
 - Next.js / Vercel
+
+## To do list
+- Refactor and simplify css files
+- Get higher resolution images and replace the current ones.
+- Add CB logo to the top of each page.
+- Adjust colors to better reflect the style guide.
+- Make sure all back buttons are functional.
+- Add color bar to progress bar at the top.
+- Add tests.

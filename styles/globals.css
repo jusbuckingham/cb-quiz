@@ -1,77 +1,81 @@
 /* styles/globals.css */
 
-/* Import Work Sans font from Google Fonts */
+/* Import the Work Sans font family from Google Fonts for use throughout the website */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
 
-/* Define custom properties (variables) here */
+/* Define CSS variables for consistent styling throughout the application */
 :root {
-  --primary-color: #556479; /* Default state for options */
-  --secondary-color: #394A62; /* Hover state for options */
-  --accent-color: #E2C47C; /* Active state for buttons and selected options */
-  --background-color: #011a37; /* Background color */
-  --text-color: #f2f2f2; /* Text color */
+  --primary-color: #556479; /* Base color for elements like buttons or icons in their default state */
+  --secondary-color: #394A62; /* Color for elements like buttons or icons on hover */
+  --accent-color: #E2C47C; /* Highlight color for active or selected elements */
+  --background-color: #011a37; /* General background color for the application */
+  --text-color: #f2f2f2; /* Primary text color used for readability against dark backgrounds */
 
-  --font-size-h1: 40px;
-  --line-height-h1: 46px;
+  --font-size-h1: 40px; /* Font size for primary headings */
+  --line-height-h1: 46px; /* Line height for primary headings, affecting readability and spacing */
 
-  --font-size-h2: 25px;
-  --line-height-h2: 29px;
+  --font-size-h2: 25px; /* Font size for secondary headings */
+  --line-height-h2: 29px; /* Line height for secondary headings */
 
-  --font-size-h3: 20px;
-  --line-height-h3: 24px;
+  --font-size-h3: 20px; /* Font size for tertiary headings */
+  --line-height-h3: 24px; /* Line height for tertiary headings */
 
-  --font-size-body: 16px;
-  --line-height-body: 25px;
+  --font-size-body: 16px; /* Font size for regular body text */
+  --line-height-body: 25px; /* Line height for body text, providing comfortable reading space */
 
-  --font-size-disclaimer: 12px;
-  --line-height-disclaimer: 18px;
+  --font-size-disclaimer: 12px; /* Font size for disclaimers or small print */
+  --line-height-disclaimer: 18px; /* Line height for disclaimers or small print */
 
-  --font-family: 'Work Sans', sans-serif; /* Font family with a fallback */
+  --font-family: 'Work Sans', sans-serif; /* The default font family, with 'sans-serif' as a fallback */
 }
 
-/* Global styles */
+/* Global styles that apply across the entire application */
 body {
-  font-family: var(--font-family);
-  color: var(--text-color);
-  background-color: var(--background-color);
-  margin: 0;
-  padding: 0;
+  font-family: var(--font-family); /* Apply the default font family */
+  color: var(--text-color); /* Set the default text color */
+  background-color: var(--background-color); /* Set the default background color */
+  margin: 0; /* Remove default margin from the body */
+  padding: 0; /* Remove default padding from the body */
 }
 
+/* Styling rules for heading 1 elements */
 h1 {
-  font-size: var(--font-size-h1);
-  line-height: var(--line-height-h1);
-  font-weight: bold;
+  font-size: var(--font-size-h1); /* Apply the defined font size for H1 */
+  line-height: var(--line-height-h1); /* Apply the defined line height for H1 */
+  font-weight: bold; /* Make H1 text bold */
 }
 
+/* Styling rules for heading 2 elements */
 h2 {
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2);
-  font-weight: 600; /* Semibold */
+  font-size: var(--font-size-h2); /* Apply the defined font size for H2 */
+  line-height: var(--line-height-h2); /* Apply the defined line height for H2 */
+  font-weight: 600; /* Make H2 text semibold */
 }
 
+/* Styling rules for heading 3 elements */
 h3 {
-  font-size: var(--font-size-h3);
-  line-height: var(--line-height-h3);
-  font-weight: 600; /* Semibold */
+  font-size: var(--font-size-h3); /* Apply the defined font size for H3 */
+  line-height: var(--line-height-h3); /* Apply the defined line height for H3 */
+  font-weight: 600; /* Make H3 text semibold */
 }
 
+/* Styling rules for paragraph elements */
 p {
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
+  font-size: var(--font-size-body); /* Apply the defined font size for body text */
+  line-height: var(--line-height-body); /* Apply the defined line height for body text */
 }
 
+/* Styling rules for text elements that are disclaimers or require a smaller print */
 .disclaimer {
-  font-size: var(--font-size-disclaimer);
-  line-height: var(--line-height-disclaimer);
+  font-size: var(--font-size-disclaimer); /* Apply the defined font size for disclaimers */
+  line-height: var(--line-height-disclaimer); /* Apply the defined line height for disclaimers */
 }
 
-
-/* Mobile Width */
+/* Media query for styling adjustments on mobile devices */
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
-    width: 335px;
-    margin: auto;
+    padding: 20px; /* Apply padding within the container */
+    width: 335px; /* Set a fixed width for the container */
+    margin: auto; /* Center the container on the screen */
   }
 }
