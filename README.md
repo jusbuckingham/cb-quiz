@@ -10,10 +10,6 @@ This project is a skincare quiz application. It guides users through a series of
 - Dynamic rendering of questions based on user input.
 - Responsive design for a seamless experience across various devices.
 
-## Technology stack
-- React
-- Next.js / Vercel
-
 ## Dependencies
 ```
   "dependencies": {
