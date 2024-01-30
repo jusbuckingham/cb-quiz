@@ -1,6 +1,6 @@
 # CB Skincare Quiz
 
-[cb icon](public/cb-quiz-frontend-imgs/0-cb-beuaty-icon.png)
+![City Beauty Icon](public/cb-quiz-frontend-imgs/0-cb-beauty-icon.png)
 
 This project is a skincare quiz application. It guides users through a series of questions about their skin care routine and preferences to provide personalized skincare advice.
 
