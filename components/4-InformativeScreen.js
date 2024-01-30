@@ -7,14 +7,13 @@ import styles from '../styles/4-InformativeScreen.module.css';
 const InformativeScreen = ({ onContinue, onSkip }) => {
   // Make sure to pass these functions from the parent component
   const handleContinueClick = () => {
-    onContinue(); // This should navigate to the next step in your application
+    onContinue(); // This will navigate to the next step in your application
   };
 
   const handleSkipClick = () => {
-    onSkip(); // This should handle skipping the current step
+    onSkip(); // This will handle skipping the current step
   };
 
-  // Make sure the image path is correct and accessible
   return (
     <div className={styles.container}>
       <div className={styles.header}>
