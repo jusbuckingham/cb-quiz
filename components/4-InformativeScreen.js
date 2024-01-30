@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from 'next/image'; // Import the Image component from Next.js
-import styles from '../styles/4-InformativeScreen.module.css'; // Update the path as necessary
+import Image from 'next/image'; 
+import styles from '../styles/4-InformativeScreen.module.css'; 
 
 const InformativeScreen = ({ onContinue, onSkip }) => {
   // 'onContinue' is used to handle the logic to go to the next step.
@@ -19,13 +19,12 @@ const InformativeScreen = ({ onContinue, onSkip }) => {
         <div className={styles.backButton} onClick={handleSkipClick}>&lt; Back</div>
       </div>
       <div className={styles.imageContainer}>
-        {/* Use the Next.js Image component for optimized image loading */}
         <Image
-          src="/cb-quiz-frontend-imgs/4-halfway-there.png" // Update the path to your image
+          src="/cb-quiz-frontend-imgs/4-halfway-there.png" 
           alt="Skin Illustration"
-          width={100} // Set the image width as required
-          height={100} // Set the image height as required
-          layout="responsive" // Makes the image scale nicely to the parent element
+          width={100} 
+          height={100} 
+          layout="responsive" 
         />
       </div>
       <div className={styles.content}>

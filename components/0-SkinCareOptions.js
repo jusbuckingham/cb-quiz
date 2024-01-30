@@ -1,6 +1,6 @@
-// SkinCareOptions.js
+// 0-SkinCareOptions.js
 import React, { useState } from 'react';
-import styles from '../styles/0-SkinCareOptions.module.css'; // Adjust the import path as necessary
+import styles from '../styles/0-SkinCareOptions.module.css'; 
 
 const SkinCareOptions = ({ onContinue }) => {
   const [selectedGoal, setSelectedGoal] = useState(null);
@@ -10,7 +10,6 @@ const SkinCareOptions = ({ onContinue }) => {
     onContinue(goal); // This will trigger the continuation process
   };
 
-  // Define your goals and corresponding images
   const goals = [
     {
       id: 'removeCrepeySkin',
