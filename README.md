@@ -25,6 +25,7 @@ This project is a skincare quiz application. It guides users through a series of
 - Get higher resolution images and replace the current ones.
 - Add CB logo to the top of each page.
 - Make sure all back buttons are functional.
+- Correct the size and color of each continue and skip button.
 - Add color bar to progress bar at the top.
 - Fix the last question so it does not send any information.
 - Make sure mobile views comply with design docs.
