@@ -1,120 +1,136 @@
 /* 5-MoisturizingFrequency.module.css */
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #021e3e; 
-    color: white; 
-    padding: 2rem;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    padding: 1rem 2rem;
-  }
-  
-  .backButton,
-  .progressIndicator {
-    cursor: pointer;
-    color: white;
-  }
-  
-  .mainContent {
-    text-align: center;
-    padding: 2rem;
-    width: 100%; 
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #021e3e;
+  color: white;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 1rem 2rem;
+}
+
+.backButton,
+.progressIndicator {
+  cursor: pointer;
+  color: white;
+}
+
+.mainContent {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sliderContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 15px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.sliderLabel {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  margin: 10px 0;
+}
+
+.levelIndicator {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.buttonContainer {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.continueButton, .skipButton {
+  padding: 20px 150px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continueButton {
+  background-color: #E2C47C;
+  color: white;
+}
+
+.skipButton {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.skipButton:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+@media (max-width: 768px) {
   .sliderContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 2rem 0;
+    width: 90%;
   }
-  
-  .slider {
-    -webkit-appearance: none;
-    width: 80%;
-    height: 15px;
-    border-radius: 5px;
-    background: #ddd;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity .2s;
-  }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-  }
-  
-  .sliderLabel {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  .levelIndicator {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-top: 1rem;
-  }
-  .buttonContainer {
-    display:grid;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2rem;
-  }
-  
+
   .continueButton, .skipButton {
-    padding: 20px 150px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 15px 100px; /* Adjust padding for smaller screens */
   }
-  
-  .continueButton {
-    background-color: #E2C47C;
-    color: white;
+
+  .header {
+    padding: 1rem; /* Adjust padding for smaller screens */
   }
-  .skipButton {
-    background-color: var(--button-bg-color);
-    border: var(--text-color);
-    border-style: ridge;
-    color: var(--text-color);
+
+  .levelIndicator,
+  .sliderLabel {
+    width: 90%; /* Adjust width for smaller screens */
   }
-  
-  
-  @media (max-width: 768px) {
-    .option {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .optionImage {
-      margin-bottom: 1rem;
-    }
-  }
-  
+}
