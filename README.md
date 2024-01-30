@@ -20,4 +20,3 @@ This project is a skincare quiz application. It guides users through a series of
 - Make sure all back buttons are functional.
 - Add color bar to progress bar at the top.
 - Add tests.
-- Fix SkinDescription Question.
