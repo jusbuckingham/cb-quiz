@@ -38,9 +38,11 @@ const InformativeScreen = ({ onContinue, onSkip }) => {
         <p>You&apos;ll achieve much more in just a few weeks of starting City Beauty&apos;s treatment.</p>
         <p>Our primary goal is to deliver deep, long-lasting hydration that will prevent harsh aging and reduce the appearance of thinning, crepey skin. Visibly achieve healthy, supple skin with us.</p>
         {/* Continue and skip buttons */}
+        <div className={styles.buttonContainer}>
         <button className={styles.gotItButton} onClick={handleContinueClick}>Got it</button>
         <button className={styles.skipButton} onClick={handleSkipClick}>Skip</button>
       </div>
+    </div>
     </div>
   );
 };

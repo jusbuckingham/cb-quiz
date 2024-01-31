@@ -63,8 +63,10 @@ const SkincareExperienceQuestion = ({ onSubmit }) => {
         <div className={styles.submissionMessage} style={{ display: showSubmissionMessage ? 'block' : 'none' }}>
           Thanks for sharing! We&apos;ve discovered that a lot of people have faced the same setbacks. City Beauty has a clear one-step treatment that is easy to follow with long-term results. In less than two minutes, you will feel better than ever.
         </div>
+        <div className={styles.buttonContainer}>
         <button type="submit" className={styles.continueButton}>Continue</button>
         <button type="button" className={styles.skipButton} onClick={onSubmit}>Skip</button>
+        </div>
       </form>
     </div>
   );

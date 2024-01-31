@@ -49,8 +49,10 @@ const SkinDescriptionSlider = ({ onContinue, onSkip }) => {
           className={styles.skinImage}
         />
       </div>
+      <div className={styles.buttonContainer}>
       <button className={styles.continueButton} onClick={() => onContinue(sliderValue)}>Continue</button>
       <button className={styles.skipButton} onClick={onSkip}>Skip</button>
+    </div>
     </div>
   );
 };

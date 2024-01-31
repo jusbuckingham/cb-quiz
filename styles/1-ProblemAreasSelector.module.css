@@ -81,8 +81,7 @@
 }
 
 .checkbox {
-  opacity: 0; /* Hide the checkbox */
-  position: absolute; /* Remove from the document flow */
+
 }
 
 .checkmark {
@@ -103,7 +102,7 @@
   transform: translate(-50%, -50%); /* Center the pseudo-element perfectly */
   width: 12px;
   height: 12px;
-  background-color: white; /* Checkmark symbol color */
+  background-color: var(--accent-color); /* Checkmark symbol color */
   border-radius: 50%; /* Round checkmark symbol */
 }
 
@@ -124,7 +123,8 @@
 
 .continueButton {
   background-color: #E2C47C; /* Custom button background color */
-  color: white; /* White text color */
+  color: black; /* White text color */
+  text-align: left;
 }
 
 .skipButton {

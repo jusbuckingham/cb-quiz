@@ -38,8 +38,10 @@ const DailyBodyCareTime = ({ onContinue, onSkip }) => {
         ))}
       </div>
       {/* Continue and skip buttons */}
+      <div className={styles.buttonContainer}>
       <button className={styles.continueButton} onClick={() => onContinue(selectedTime)}>Continue</button>
       <button className={styles.skipButton} onClick={onSkip}>Skip</button>
+    </div>
     </div>
   );
 };

@@ -34,27 +34,35 @@
   max-width: 600px; /* Adjust width as needed for your design */
 }
 
-/* === Button Styles === */
-.gotItButton, .skipButton {
-  padding: 1rem 2rem;
+/* === Button Container Styles === */
+.buttonContainer {
+  display: grid; /* Use CSS Grid for layout */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Add space between buttons */
   margin-top: 2rem; /* Add space at the top */
+}
+
+.gotItButton, .skipButton {
+  padding: 20px 150px; /* Button padding */
   border: none; /* Remove button border */
-  border-radius: var(--border-radius-button); /* Define this in globals.css */
   cursor: pointer; /* Show pointer cursor on hover */
   transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 .gotItButton {
-  background-color: var(--button-bg-color); /* Define this in globals.css */
-  color: white; /* White text color */
-  font-size: var(--font-size-body); /* Use body font size from globals.css */
-  margin-right: 1rem; /* Add space on the right */
+  background-color: #E2C47C; /* Custom button background color */
+  color: black; /* Black text color */
 }
 
 .skipButton {
-  background-color: transparent; /* Transparent background */
-  color: var(--text-color); /* Text color from globals.css */
-  border: 2px solid var(--text-color); /* Adds a border to the skip button */
+  background-color: var(--button-bg-color); /* Button background color from CSS variables */
+  border: var(--text-color); /* Button border color from CSS variables */
+  border-style: ridge; /* Add ridge border style */
+  color: var(--text-color); /* Text color from CSS variables */
+}
+
+.skipButton:hover {
+  background-color: var(--button-bg-hover-color); /* Button background hover color from CSS variables */
 }
 
 /* === Responsive Styles (Max-width: 768px) === */
