@@ -32,7 +32,7 @@ const DailyBodyCareTime = ({ onContinue, onSkip }) => {
     <div className={styles.container}>
       <div className={styles.header}>
         {/* Back button */}
-        <div className={styles.backButton} onClick={onSkip}>&lt; Back</div>
+        <div className={styles.backButton}>&lt;</div>
         <div className={styles.progress}>4/6</div>
       </div>
       <h2 className={styles.title}>How often do you moisturize your skin?</h2>

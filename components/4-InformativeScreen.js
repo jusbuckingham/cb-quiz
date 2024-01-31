@@ -19,7 +19,7 @@ const InformativeScreen = ({ onContinue, onSkip }) => {
     <div className={styles.container}>
       <div className={styles.header}>
         {/* Back button */}
-        <div className={styles.backButton} onClick={handleSkipClick}>&lt; Back</div>
+        <div className={styles.backButton}>&lt;</div>
       </div>
       <div className={styles.imageContainer}>
         {/* Displaying an image */}

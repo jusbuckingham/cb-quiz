@@ -16,7 +16,7 @@ const DailyBodyCareTime = ({ onContinue, onSkip }) => {
     <div className={styles.container}>
       <div className={styles.header}>
         {/* Back button */}
-        <div className={styles.backButton} onClick={onSkip}>&lt;</div>
+        <div className={styles.backButton}>&lt;</div>
         {/* Progress indicator */}
         <div className={styles.progress}>5/6</div>
       </div>

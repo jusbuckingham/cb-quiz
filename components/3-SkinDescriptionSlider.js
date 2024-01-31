@@ -28,7 +28,7 @@ const SkinDescriptionSlider = ({ onContinue, onSkip }) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.backButton} onClick={onSkip}>&lt; Back</div>
+      <div className={styles.backButton}>&lt;</div>
         <div className={styles.progress}>3/6</div>
       </div>
       <h2 className={styles.title}>How would you describe your skin?</h2>

@@ -43,6 +43,8 @@ const SkincareExperienceQuestion = ({ onSubmit }) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.header}></div>
+      <div className={styles.backButton}>&lt;</div>
       <div className={styles.progress}>6/6</div>
       <h2>Have you experienced any of these issues in your previous skincare attempts?</h2>
       <form onSubmit={handleSubmit}>
