@@ -15,8 +15,11 @@
 
 /* === Header Styles === */
 .header {
+  display: flex;
   width: 100%;
-  padding: 1rem 0; /* Add padding to header */
+  justify-content: space-between; /* Space between header items */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 2rem; /* Add space at the bottom */
 }
 
 .progress {
@@ -45,12 +48,10 @@
 
 .checkbox {
   /* Custom checkbox styling */
-  appearance: none; /* Hide default checkbox appearance */
   margin-right: 1rem; /* Add space on the right of the checkbox */
   height: 20px;
   width: 20px;
-  border-radius: 50%; /* Rounded checkbox */
-  border: 2px solid #F1C40F; /* Golden border for checkbox */
+  border: solid white; /* Golden border for checkbox */
   background-color: transparent; /* Transparent background */
   cursor: pointer; /* Show pointer cursor on hover */
 }
